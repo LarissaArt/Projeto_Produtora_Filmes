@@ -1,0 +1,191 @@
+/* Estilo Global */
+body { 
+    
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+main {
+    padding-top: 100px; /* Espaço para o menu fixo */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #686d6b;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul li a {
+    color: rgb(72, 5, 5);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4e1d1d;
+}
+
+/* Estilizando o conteúdo das seções */
+.secao {
+    display: none; /* Esconder todas as seções inicialmente */
+    padding: 100px 20px;
+    margin-top: 80px; /* Evitar sobreposição com o menu fixo */
+}
+
+
+.ativa {
+    display: block; /* Somente a seção ativa é exibida */
+}
+
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 39px;
+    height: 39px;
+    object-fit: cover;
+}
+
+
+section {
+    margin: 30px; /* Espaçamento externo de 20px */
+    border: 2px solid #333; /* Borda para visualização */
+    background-color: white; /* Cor de fundo da seção */
+}
+
+/* Conteúdo principal */
+.content {
+    margin-top: 100%; /* Adiciona margem no topo para evitar sobreposição com a barra fixa */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f4f4f4;
+}
+
+/* Container de filmes */
+.filme-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.filme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filme img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.sinopse {
+    max-width: 60%;
+}
+
+.sinopse h2 {
+    margin-top: 0;
+}
+
+.inverso {
+    flex-direction: row-reverse;
+}
+
+
+
+/*menu lateral*/
+
+aside.menu-lateral {
+    
+    position: fixed;
+    top: 23%;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    
+    width: 15px;
+   
+    background-color: rgb(9, 2, 2) ;
+    padding: 40px 0 40px 1%;
+    box-shadow: 4px 0 0 rgb(83, 53, 67);
+    
+    z-index: 1000;
+    transition: left 0.3s ease;
+
+}
+
+aside.menu-lateral:hover {
+    width: 230px;
+  
+}
+
+.btn-expandir > i{
+    cursor: pointer;
+    font-size: 30px;
+    color: #554e4e
+    
+}
+
+ul {
+   height: 100%;
+    list-style-type: none;
+}
+
+
+
+.efeito a:hover {
+    transition: .2s;
+    background-color: rgb(181, 176, 51);
+   
+}
+
+
+
+
+ul a {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 20px 4%;
+    text-decoration: none;
+     color: white;
+     line-height: 20px;
+    
+     
+    }
+
+    
+ul a .txt-link {
+    margin-left: 40PX;
+   
+}

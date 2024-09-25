@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellas Filmes</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+ 
+
+</head>
+
+<!--SE FOR NECESSÁRIO MEXER EM ALGUMA TAG DE FORMA INDIVIDUAL, ADD CLASS Á ELA. SEMPRE ANALIZANDO SE ELA JÁ NÃO
+EXISTE NO ARQUIVO DO CSS-->
+
+
+<body>
+    <!-- Menu -->
+     <!-- Diminuir a largura do menu fixo no topo da página, organizar as opções para que els tenha a mesma distância-->
+      <!--ver cor adequada para letra e o background, dar algum efeito para as opções do menu ao passar o mouse, logos de rede sociais tbm-->
+ 
+      <header class="header-container"> 
+
+           
+
+
+              
+            <nav>
+
+                <ul>
+                    
+                <div class="social-media">
+                    <ul class="mpGTIt" aria-label="Redes sociais">
+                        <a href="https://www.youtube.com/HellasFilmes" target="_blank" aria-label="YouTube">
+                            <img alt="YouTube" src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png" style="width: 39px; height: 39px; object-fit: cover;">
+                        </a>
+                        <a href="https://instagram.com/hellasfilmes" target="_blank" aria-label="Instagram">
+                            <img alt="Instagram" src="https://static.wixstatic.com/media/fdcfaba150fc427da298a00cb09d91c1.png" style="width: 39px; height: 39px; object-fit: cover;">
+                        </a>
+                        <a href="http://www.facebook.com/HellasFilmes" target="_blank" aria-label="Facebook">
+                            <img alt="Facebook" src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png" style="width: 39px; height: 39px; object-fit: cover;">
+                        </a>
+                        
+                    </ul>
+                </div>
+    
+                    <a href="#" onclick="mostrarSecao('secao1')">Home</a>
+                    <a href="#" onclick="mostrarSecao('secao2')">Cursos e Workshops</a>
+                    <a href="#" onclick="mostrarSecao('secao3')">Curtas</a>
+                    <a href="#" onclick="mostrarSecao('secao4')">Web Séries</a>
+                    <a href="#" onclick="mostrarSecao('secao4')">Diretor</a>
+                    <a href="#contato">Contato</a>
+                </ul>
+            </nav>
+        </header>
+
+
+          <!-- Menu Lateral -->
+           <!--Organizar as opções para que mostrem todas por igual, arrumar o tamanho que abre e a largura que
+           fica o menu para que fechado ele cubra informações da página-->
+           <!--Trocar cor do menu e da borda dele, trocar cor da transição de quando o mouse passa -->
+           <!--Deixar as opções padrões e fixas á arquerda-->
+<aside class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list"></i>
+            <ul class="efeito">
+               
+                <a href="#" onclick="mostrarSecao('filmografia')">FILMOGRAFIA</a>
+                <a href="#" onclick="mostrarSecao('festivais')">FESTIVAIS</a>
+                <a href="#" onclick="mostrarSecao('secao2')">CURSOS</a>
+                <a href="#"><span class="icon"></span><span class="txt-link">WEB SÉRIES</span></a></li>
+                <a href="#"><span class="icon"></i></span><span class="txt-link">O DIRETOR</span></a></li>
+                <a href="#"><span class="txt-link">CURTAS</span></a></li>
+            </ul>
+        </div>  
+    </aside>
+
+
+    <!--Com JS fazer um Carrossel com as fotos (fotos provisórias), elas terão a mesma largura e altura da tela, 
+    como deixei de exemplo-->
+    <!--Adicionar uma transição leve para que as fotos troquem depois de alguns segundos-->
+    <div>
+        
+        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1215px"  height="570px"></div>
+         <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.42.jpeg" width="1215px"  height="570px"></div>
+        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (1).jpeg" width="1215px"  height="570px" ></div>
+        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (2).jpeg" width="1215px"  height="570px"></div>
+        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1215px"  height="570px"></div>
+
+    </div>
+
+    <!-- Conteúdo principal onde as páginas serão carregadas -->
+     <!-- Centralizar logo e ver como ela fica mais adequada, se acrescenta uma forda atrás, ou de que maneira
+      ela fica melhor-->
+      <!--Acrescentar transição se desejar-->
+      <!--Arrumar altura e largura-->
+    <main id="main-content">
+      
+        <img src="logo/Logo Hellas - capacete.png" height="150px" width="200px">
+        <img src="logo/Logo Hellas - HELLAS.png" height="100px" width="450px">
+        <img src="logo/Logo Hellas - FILMES (1).png" height="100px" width="450px">
+       
+        
+    <!-- tornar cada sessão dinâmica, arrumar altura e largura da imagem, colocar dexto ao lado da imagem -->
+     <!--acrescentam algum efeito as imagens e ver qual melhor se adapta ao layout-->
+     <!--USA A CRIATIVIDADE, PROCURA OUTRAS PÁGINAS E SE INSPIRE-->
+    <main>
+        <section id="secao1" class="secao ativa">
+           
+
+
+            <div class="filme-container">
+                <div class="filme">
+                    <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
+                    <div class="sinopse">
+                        <h2>Filme 1</h2>
+                        <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="filme inverso">
+                    <div class="sinopse">
+                        <h2>Filme 2</h2>
+                        <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
+                </div>
+
+                <div class="filme">
+
+                    <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
+                    <div class="sinopse">
+                        <h2>Filme 1</h2>
+                        <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="filme inverso">
+                    <div class="sinopse">
+                        <h2>Filme 2</h2>
+                        <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
+                </div>
+                <!-- Outros filmes... -->
+            </div>
+
+            <!--LUD, acrescentar campo para contato onde contenha espaço para nome, e-mail, tel, e para digitar a mensagem-->
+            <!--Acrescenatr banco de dados para que de fato envie para o e-mail dele as informações e mensagens-->
+            
+            <div id="contato">
+                <h2>Contato</h2>
+                <p>Email: contato@hellasfilmes.com</p>
+                <p>Telefone: (XX) XXXX-XXXX</p>
+                <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+           </div>
+            
+
+        </section>
+
+        <section id="secao2" class="secao">
+            <h2> Cursos e Workshops</h2>
+
+            
+
+            <p>.</p>
+        </section>
+
+        <section id="secao3" class="secao">
+            <h2>Curtas</h2>
+            <p>Curtas</p>
+        </section>
+
+
+        <!--ORGANIZAR O PARÁGRAFO E VER COMO ELE FICA MELHOR, ARRUMAR FOTO DO DAN E VER SE COMBINA MAIS ELA
+        QUADRADA, REDONDA, EM QUAL LUGAR DA SESSÃO. SEJA CRIATIVO E USE SITES DE INSPIRAÇÃO-->
+        <section id="secao4" class="secao">
+            <h2> Daniel Castilhos e sua trajetória</h2>
+
+            <div> 
+                <img src="diretor/Diretor.jpeg" alt="Daniel Castilhos">
+            </div>
+
+
+            <p>Daniel Castilhos é diretor de internet, televisão e cinema, ator,  produtor e roteirista e já <br>
+             para a televisão "Le, Letícia, Beto & Roberto", "Fic @ Comigo" e "Gurias", exibidos no Programa <br> 
+             Garajão da Ulbra TV, de Porto Alegre, RS, entre 2010 e 2013. Também dirigiu e escreveu o curta-metragem <br>
+              "I Can See The Mist" que foi indicado ao Prêmio de Melhor Atriz - por Stéphanie Pereira - na edição <br>
+              de setembro de 2016 do “12 Months Film Festival of Romania” e indicação ao Melhor Filme no “5º Festival <br>
+               Internacional de Cinema Digital de Atenas”, que aconteceu na Grécia em dezembro de 2015.</p>
+
+               <p>
+                Em 2016 sua primeira web serie, “Blue Boys” foi indicada a seis prêmios no Rio WebFest e ganhou dois “Silver Ticket”, <br>
+                uma indicação direta ao Wendie WebFest, na Alemanha, e ao Sicily WebFest, na Itália, ambos acontecendo no mesmo ano. <br>
+                Essa série também rendeu o prêmio de Melhor Drama no “Prêmios Latinos” da Espanha e foi adquirida pela REVRYtv, canal de streaming americano. <br>
+                No seu canal do YouTube produziu ainda outras 5 séries, a maioria passando em vários festivais mundiais,como “O Cárcere” que rendeu o prêmio de “Most Media Supporter” no Rolda Web Fest da Colômbia.<br>
+                Daniel também é preparador de elenco e trabalhou por dez anos na Escola de Atores, TV & Cinema de Porto Alegre, Brasil, onde já fez mais de oitenta curtas-metragens com seus alunos. Em 2019 trabalhou na Reis Oficina de Atores, no Rio de Janeiro, também produzindo material audiovisual com seus alunos.
+               </p>
+        </section>
+
+        <section id="filmografia" class="secao">
+            <h2>filmografia</h2>
+            <p>Filmes</p>
+        </section>
+
+        <section id="festivais" class="secao">
+            <h2>FESTIVAIS</h2>
+            <p>ACABA PELO AMOR DE DEUSSSS</p>
+        </section>
+
+        </section>
+    </main>     
+
+
+  
+    
+    <!-- Filmes -->
+    
+    <!-- Contato -->
+  
+    <!-- Script para carregamento dinâmico de páginas -->
+    
+      
+
+
+
+    <script src="menu.js"></script>
+
+
+  
+
+    <footer></footer>
+</body>
+</html>
