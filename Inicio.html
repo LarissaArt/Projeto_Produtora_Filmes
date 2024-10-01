@@ -82,6 +82,15 @@ EXISTE NO ARQUIVO DO CSS-->
     </aside>
 
 
+
+    <!-- Conteúdo principal onde as páginas serão carregadas -->
+     <!-- Centralizar logo e ver como ela fica mais adequada, se acrescenta uma forda atrás, ou de que maneira
+      ela fica melhor-->
+      <!--Acrescentar transição se desejar-->
+      <!--Arrumar altura e largura-->
+    <main id="main-content">
+
+        
     <!--Com JS fazer um Carrossel com as fotos (fotos provisórias), elas terão a mesma largura e altura da tela, 
     como deixei de exemplo-->
     <!--Adicionar uma transição leve para que as fotos troquem depois de alguns segundos-->
@@ -95,13 +104,7 @@ EXISTE NO ARQUIVO DO CSS-->
 
     </div>
 
-    <!-- Conteúdo principal onde as páginas serão carregadas -->
-     <!-- Centralizar logo e ver como ela fica mais adequada, se acrescenta uma forda atrás, ou de que maneira
-      ela fica melhor-->
-      <!--Acrescentar transição se desejar-->
-      <!--Arrumar altura e largura-->
-    <main id="main-content">
-      
+        
         <img src="logo/Logo Hellas - capacete.png" height="150px" width="200px">
         <img src="logo/Logo Hellas - HELLAS.png" height="100px" width="450px">
         <img src="logo/Logo Hellas - FILMES (1).png" height="100px" width="450px">
@@ -111,9 +114,29 @@ EXISTE NO ARQUIVO DO CSS-->
      <!--acrescentam algum efeito as imagens e ver qual melhor se adapta ao layout-->
      <!--USA A CRIATIVIDADE, PROCURA OUTRAS PÁGINAS E SE INSPIRE-->
     <main>
-        <section id="secao1" class="secao ativa">
-           
 
+    <section >
+
+     
+     <img class="apresentacao" src="diretor/Diretor.jpeg" height="400px" width="359px">
+
+     <div class="hellas">
+        <h2>Hellas Filmes</h2>
+        <p class="letra">
+            Somos uma produtora de filmes e séries e<br>
+            Escola de Atores para o Audiovisual.<br>
+            Com trabalhos desenvolvidos com alunos e<br>
+            profissionais qualificados no mercado de<br>
+            trabalho do Rio de Janeiro, São Paulo e Porto Alegre.
+        </p>
+    </div>
+
+    </section>
+    
+        <section id="secao1" class="secao ativa">
+         
+   
+    
 
             <div class="filme-container">
                 <div class="filme">
@@ -172,7 +195,18 @@ EXISTE NO ARQUIVO DO CSS-->
 
         <section id="secao3" class="secao">
             <h2>Curtas</h2>
-            <p>Curtas</p>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/p_9BakvQowo?si=5J6JHcZRmy5eDDC0" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <div class="video-thumbnails">
+                    <button onclick="changeVideo('SEU_VIDEO_ID1')">Vídeo 1</button>
+                    <button onclick="changeVideo('SEU_VIDEO_ID2')">Vídeo 2</button>
+                    <button onclick="changeVideo('SEU_VIDEO_ID3')">Vídeo 3</button>
+                    <!-- Adicione mais botões conforme necessário -->
+                </div>
+            </div>
         </section>
 
 

@@ -1,9 +1,20 @@
 /* Estilo Global */
+@media (max-width: 768px) {
+    /* Estilos para telas menores, como tablets e smartphones */
+    .container {
+      width: 100%;
+    }
+  }
+  
+
 body { 
     
     font-family: Arial, sans-serif;
     background-color: #333;
 }
+
+
+  
 
 main {
     padding-top: 100px; /* Espaço para o menu fixo */
@@ -188,4 +199,16 @@ ul a {
 ul a .txt-link {
     margin-left: 40PX;
    
+}
+.apresentacao {
+    position: relative;
+    border-radius: 15px;
+    top: 100px;
+    left: 60%;
+}
+
+.hellas {
+    position: relative;
+    left: 100px;
+    top: -200px;
 }
