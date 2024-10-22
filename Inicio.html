@@ -16,6 +16,7 @@
 
 </head>
 
+
 <!--SE FOR NECESSÁRIO MEXER EM ALGUMA TAG DE FORMA INDIVIDUAL, ADD CLASS Á ELA. SEMPRE ANALIZANDO SE ELA JÁ NÃO
 EXISTE NO ARQUIVO DO CSS-->
 
@@ -25,7 +26,7 @@ EXISTE NO ARQUIVO DO CSS-->
      <!-- Diminuir a largura do menu fixo no topo da página, organizar as opções para que els tenha a mesma distância-->
       <!--ver cor adequada para letra e o background, dar algum efeito para as opções do menu ao passar o mouse, logos de rede sociais tbm-->
  
-      <header class="header-container"> 
+      <header  id="header-container" class="header-container"> 
 
            
 
@@ -33,7 +34,7 @@ EXISTE NO ARQUIVO DO CSS-->
               
             <nav>
 
-                <ul>
+                <ul class="rede-sociais">
                     
                 <div class="social-media">
                     <ul class="mpGTIt" aria-label="Redes sociais">
@@ -47,15 +48,20 @@ EXISTE NO ARQUIVO DO CSS-->
                             <img alt="Facebook" src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png" style="width: 39px; height: 39px; object-fit: cover;">
                         </a>
                         
+                       
                     </ul>
-                </div>
-    
+               
+
+               
                     <a href="#" onclick="mostrarSecao('secao1')">Home</a>
                     <a href="#" onclick="mostrarSecao('secao2')">Cursos e Workshops</a>
                     <a href="#" onclick="mostrarSecao('secao3')">Curtas</a>
                     <a href="#" onclick="mostrarSecao('secao4')">Web Séries</a>
-                    <a href="#" onclick="mostrarSecao('secao4')">Diretor</a>
+                    <a href="#" onclick="mostrarSecao('secao5')">Diretor</a>
                     <a href="#contato">Contato</a>
+
+                </div>
+                  
                 </ul>
             </nav>
         </header>
@@ -65,21 +71,20 @@ EXISTE NO ARQUIVO DO CSS-->
            <!--Organizar as opções para que mostrem todas por igual, arrumar o tamanho que abre e a largura que
            fica o menu para que fechado ele cubra informações da página-->
            <!--Trocar cor do menu e da borda dele, trocar cor da transição de quando o mouse passa -->
-           <!--Deixar as opções padrões e fixas á arquerda-->
-<aside class="menu-lateral">
-        <div class="btn-expandir">
-            <i class="bi bi-list"></i>
-            <ul class="efeito">
-               
-                <a href="#" onclick="mostrarSecao('filmografia')">FILMOGRAFIA</a>
-                <a href="#" onclick="mostrarSecao('festivais')">FESTIVAIS</a>
-                <a href="#" onclick="mostrarSecao('secao2')">CURSOS</a>
-                <a href="#"><span class="icon"></span><span class="txt-link">WEB SÉRIES</span></a></li>
-                <a href="#"><span class="icon"></i></span><span class="txt-link">O DIRETOR</span></a></li>
-                <a href="#"><span class="txt-link">CURTAS</span></a></li>
+           <aside id="menu-lateral" class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list"></i>
+            </div>
+            <ul class="opcoes">
+                <li><a href="#" onclick="mostrarSecao('filmografia')">FILMOGRAFIA</a></li>
+                <li><a href="#" onclick="mostrarSecao('festivais')">FESTIVAIS</a></li>
+                <li><a href="#" onclick="mostrarSecao('secao2')">CURSOS</a></li>
+                <li><a href="#" onclick="mostrarSecao('secao4')">WEB SÉRIES</a></li>
+                <li><a href="#">O DIRETOR</a></li>
+                <li><a href="#">CURTAS</a></li>
             </ul>
-        </div>  
-    </aside>
+        </aside>
+        
 
 
 
@@ -88,135 +93,136 @@ EXISTE NO ARQUIVO DO CSS-->
       ela fica melhor-->
       <!--Acrescentar transição se desejar-->
       <!--Arrumar altura e largura-->
-    <main id="main-content">
+    
 
+      
+       
+            <section id="secao1" class="secao" >
+             
         
-    <!--Com JS fazer um Carrossel com as fotos (fotos provisórias), elas terão a mesma largura e altura da tela, 
-    como deixei de exemplo-->
-    <!--Adicionar uma transição leve para que as fotos troquem depois de alguns segundos-->
-    <div>
+                
+                    <div class="principal-carossel">
+                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1100px" height="570px"></div>
+                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.42.jpeg" width="1100px" height="570px"></div>
+                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (1).jpeg" width="1100px" height="570px"></div>
+                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (2).jpeg" width="1100px" height="570px"></div>
+                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1100px" height="570px"></div>
+                    </div>
+                
         
-        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1215px"  height="570px"></div>
-         <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.42.jpeg" width="1215px"  height="570px"></div>
-        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (1).jpeg" width="1215px"  height="570px" ></div>
-        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (2).jpeg" width="1215px"  height="570px"></div>
-        <div><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1215px"  height="570px"></div>
+                <div class="hellas-container" style="background-color: aquamarine;">
+                    <img class="apresentacao" src="diretor/Diretor.jpeg" height="400px" width="359px">
+                    <h2>Hellas Filmes</h2>
+                    <p class="letra">
+                        Somos uma produtora de filmes e séries e<br>
+                        Escola de Atores para o Audiovisual.<br>
+                        Com trabalhos desenvolvidos com alunos e<br>
+                        profissionais qualificados no mercado de<br>
+                        trabalho do Rio de Janeiro, São Paulo e Porto Alegre.
+                    </p>
+                </div>
+        
+                <div class="filme-container" style="background-color: #f8d7da;">
+                    <div class="filme">
+                        <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
+                        <div class="sinopse">
+                            <h2>Filme 1</h2>
+                            <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="filme inverso">
+                        <div class="sinopse">
+                            <h2>Filme 2</h2>
+                            <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
+                    </div>
+        
+                    <div class="filme">
+                        <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
+                        <div class="sinopse">
+                            <h2>Filme 1</h2>
+                            <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="filme inverso">
+                        <div class="sinopse">
+                            <h2>Filme 2</h2>
+                            <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
+                    </div>
+                </div>
+        
+                <div id="contato" style="background-color: #d3cce3;">
+                    <h2>Contato</h2>
+                    <p>Email: contato@hellasfilmes.com</p>
+                    <p>Telefone: (XX) XXXX-XXXX</p>
+                    <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+                </div>
+            </section>
+        
+            <section id="secao2" class="secao" style="background-color: #e2e3e5;">
+                <h2>OFICINA DE WEB SÉRIE</h2>
+                <h1>Conheça nossos projetos e cursos abertos e saiba mais sobre eles!</h1>
+                <p>
+                    Você e mais um grupo de 08 a 12 integrantes desenvolvem a preparação online de um roteiro de <br>
+                    web série escrito sob medida para vocês. Como conclusão, após o oito encontros, vocês gravam a <br>
+                    série em diárias combinadas entre o grupo no Rio de Janeiro ou na cidade onde os integrantes <br>
+                    contratarem o projeto. Início na segunda semana de março de 2021. Gravações previstas para <br>
+                    acontecerem entre maio e junho de 2021. Maiores detalhes para esse projeto chamar pelo WhatsApp: (11) 99353-8483
+                </p>
+            </section>
+        
+            
+            <section id="secao3" class="secao" style="background-color: #d1ecf1;">
+                
+                <div id="video-player" width="1000" height="600">
+                    <iframe class="player-principal" width="1000" height="500" src="https://www.youtube.com/embed/jNqj5_ojcck?si=vMFTkw2WehSQdB7C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div id="thumbnails">
+                    <div class="thumbnail-container">
+                        <img class="thumbnail" data-video-id="Wu0auQG2E6M" src="https://img.youtube.com/vi/Wu0auQG2E6M/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="Hfp3loz88MM" src="https://img.youtube.com/vi/Hfp3loz88MM/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="cM-z7TQsWbA" src="https://img.youtube.com/vi/cM-z7TQsWbA/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="F8lte80f8tg" src="https://img.youtube.com/vi/F8lte80f8tg/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="dT27zwDJhJo" src="https://img.youtube.com/vi/dT27zwDJhJo/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="KB79-HmgSPQ" src="https://img.youtube.com/vi/KB79-HmgSPQ/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="_-Ix7Pc2T2U" src="https://img.youtube.com/vi/_-Ix7Pc2T2U/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="Z9y621NMEZs" src="https://img.youtube.com/vi/Z9y621NMEZs/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="cnLxZXywiiA" src="https://img.youtube.com/vi/cnLxZXywiiA/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="lDpN2h97s7k" src="https://img.youtube.com/vi/lDpN2h97s7k/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="XsijxO0Qf40" src="https://img.youtube.com/vi/XsijxO0Qf40/default.jpg" alt="Video 1" style="cursor: pointer;">
+                        <img class="thumbnail" data-video-id="B5PESkm9bPE" src="https://img.youtube.com/vi/B5PESkm9bPE/default.jpg" alt="Video 1" style="cursor: pointer;">
+                    </div>
 
-    </div>
-
-        
-        <img src="logo/Logo Hellas - capacete.png" height="150px" width="200px">
-        <img src="logo/Logo Hellas - HELLAS.png" height="100px" width="450px">
-        <img src="logo/Logo Hellas - FILMES (1).png" height="100px" width="450px">
+                    <div class="button-container">
+                        <button id="prev" onclick="changeThumbnails(-1)">&#10094;</button>
+                        <button id="next" onclick="changeThumbnails(1)">&#10095;</button>
+                    </div>
+                </div>
+            </section>
        
         
-    <!-- tornar cada sessão dinâmica, arrumar altura e largura da imagem, colocar dexto ao lado da imagem -->
-     <!--acrescentam algum efeito as imagens e ver qual melhor se adapta ao layout-->
-     <!--USA A CRIATIVIDADE, PROCURA OUTRAS PÁGINAS E SE INSPIRE-->
-    <main>
 
-    <section >
 
-     
-     <img class="apresentacao" src="diretor/Diretor.jpeg" height="400px" width="359px">
-
-     <div class="hellas">
-        <h2>Hellas Filmes</h2>
-        <p class="letra">
-            Somos uma produtora de filmes e séries e<br>
-            Escola de Atores para o Audiovisual.<br>
-            Com trabalhos desenvolvidos com alunos e<br>
-            profissionais qualificados no mercado de<br>
-            trabalho do Rio de Janeiro, São Paulo e Porto Alegre.
-        </p>
-    </div>
 
     </section>
-    
-        <section id="secao1" class="secao ativa">
-         
-   
-    
 
-            <div class="filme-container">
-                <div class="filme">
-                    <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
-                    <div class="sinopse">
-                        <h2>Filme 1</h2>
-                        <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <div class="filme inverso">
-                    <div class="sinopse">
-                        <h2>Filme 2</h2>
-                        <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
-                </div>
 
-                <div class="filme">
-
-                    <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
-                    <div class="sinopse">
-                        <h2>Filme 1</h2>
-                        <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <div class="filme inverso">
-                    <div class="sinopse">
-                        <h2>Filme 2</h2>
-                        <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
-                </div>
-                <!-- Outros filmes... -->
-            </div>
-
-            <!--LUD, acrescentar campo para contato onde contenha espaço para nome, e-mail, tel, e para digitar a mensagem-->
-            <!--Acrescenatr banco de dados para que de fato envie para o e-mail dele as informações e mensagens-->
-            
-            <div id="contato">
-                <h2>Contato</h2>
-                <p>Email: contato@hellasfilmes.com</p>
-                <p>Telefone: (XX) XXXX-XXXX</p>
-                <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
-           </div>
-            
-
+        <section id="secao4" class="secao">
+            <p>
+                WEB SÉRIES
+            </p>
         </section>
-
-        <section id="secao2" class="secao">
-            <h2> Cursos e Workshops</h2>
-
-            
-
-            <p>.</p>
-        </section>
-
-        <section id="secao3" class="secao">
-            <h2>Curtas</h2>
-            <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/p_9BakvQowo?si=5J6JHcZRmy5eDDC0" title="YouTube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                <div class="video-thumbnails">
-                    <button onclick="changeVideo('SEU_VIDEO_ID1')">Vídeo 1</button>
-                    <button onclick="changeVideo('SEU_VIDEO_ID2')">Vídeo 2</button>
-                    <button onclick="changeVideo('SEU_VIDEO_ID3')">Vídeo 3</button>
-                    <!-- Adicione mais botões conforme necessário -->
-                </div>
-            </div>
-        </section>
-
 
         <!--ORGANIZAR O PARÁGRAFO E VER COMO ELE FICA MELHOR, ARRUMAR FOTO DO DAN E VER SE COMBINA MAIS ELA
         QUADRADA, REDONDA, EM QUAL LUGAR DA SESSÃO. SEJA CRIATIVO E USE SITES DE INSPIRAÇÃO-->
-        <section id="secao4" class="secao">
+        <section id="secao5" class="secao">
             <h2> Daniel Castilhos e sua trajetória</h2>
 
             <div> 
-                <img src="diretor/Diretor.jpeg" alt="Daniel Castilhos">
+                
             </div>
 
 
@@ -247,7 +253,7 @@ EXISTE NO ARQUIVO DO CSS-->
         </section>
 
         </section>
-    </main>     
+   
 
 
   
@@ -266,7 +272,6 @@ EXISTE NO ARQUIVO DO CSS-->
 
 
   
-
-    <footer></footer>
-</body>
+   
+      </body>
 </html>

@@ -1,64 +1,69 @@
-/* Estilo Global */
-@media (max-width: 768px) {
-    /* Estilos para telas menores, como tablets e smartphones */
-    .container {
-      width: 100%;
-    }
-  }
-  
+/* Estilo Global */ 
 
-body { 
+
+
+/* Remover margens e preenchimentos padrão */
+
+
+/* O body ocupa toda a janela do navegador */
+html, body {
+    background-color: #0077B3;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que ocupe a altura total */
+    width: 100%; /* Garante que ocupe a largura total */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+        box-sizing: border-box;
     
-    font-family: Arial, sans-serif;
-    background-color: #333;
 }
 
 
-  
-
+/* O main ocupa toda a altura e largura da página */
 main {
+    min-height: 100vh; /* Garante que cubra toda a altura da janela */
+    width: 100%; /* Largura total da página */
     padding-top: 100px; /* Espaço para o menu fixo */
+    position: relative;
 }
+
+/* Menu principal*/
 
 header {
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: #686d6b;
-    z-index: 1000;
+    left: 0; /* Alinha o header à esquerda da página */
+    width: 100%; /* Ocupa 100% da largura da janela */
+    background-color: #000000A6; /* Fundo semi-transparente */
+   
+    z-index: 1; /* Eleva o header sobre outros elementos */
+    padding: 0; /* Remove qualquer espaço interno */
+    margin: 0; /* Remove margem externa */
+    height: 50px; /* Define a altura do header */
+    box-sizing: border-box; /* Inclui padding e borda dentro da largura/altura */
 }
+
+
 
 nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     margin: 0;
-    padding: 1em;
+    padding: 0;
+    max-width: 100%;
 }
 
-nav ul li a {
-    color: rgb(72, 5, 5);
-    text-decoration: none;
-    padding: 0.5em 1em;
-    transition: 0.3s ease;
-}
 
-nav ul li a:hover {
-    background-color: #4e1d1d;
-}
 
-/* Estilizando o conteúdo das seções */
 .secao {
-    display: none; /* Esconder todas as seções inicialmente */
-    padding: 100px 20px;
-    margin-top: 80px; /* Evitar sobreposição com o menu fixo */
+    display: none;
+    padding: 10px 20px;
+    margin-top: 80px;
 }
-
 
 .ativa {
-    display: block; /* Somente a seção ativa é exibida */
+    display: block;
 }
-
 
 .social-media {
     display: flex;
@@ -68,8 +73,8 @@ nav ul li a:hover {
 .social-media ul {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 5px;
+    margin: 4px;
 }
 
 .social-media li {
@@ -77,26 +82,87 @@ nav ul li a:hover {
 }
 
 .social-media img {
-    width: 39px;
-    height: 39px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
+    margin-top: -10px;
 }
 
 
-section {
-    margin: 30px; /* Espaçamento externo de 20px */
-    border: 2px solid #333; /* Borda para visualização */
-    background-color: white; /* Cor de fundo da seção */
+/* sessões */
+
+
+#secao1 {
+    height: 100%;
+    background-color: rgb(54, 127, 186);
 }
 
-/* Conteúdo principal */
+#secao3 {
+    width: 80%; /* Define a largura da seção. Altere para o valor desejado, como 100%, 50%, etc. */
+    max-width: 800px; /* Define uma largura máxima para não exceder esse tamanho */
+    height: auto; /* Altere para um valor fixo se desejar uma altura específica */
+    padding: 20px; /* Espaço interno dentro da seção */
+    margin: 20px auto; /* Margem superior/inferior de 20px e centraliza a seção horizontalmente */
+    border: 40px solid #ffffff; /* Adiciona uma borda para visualização (opcional) */
+    
+
+    background-image: url('sessao_curtas/filme img.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz com que a imagem cubra toda a seção */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    padding: 20px; /* Adiciona um espaçamento interno, se necessário */
+   
+
+
+}
+
+
+.nova-secao  {
+    position: relative; /* Permite posicionar elementos filhos em relação a este elemento */
+   
+    background-size: cover; /* A imagem cobre toda a seção, mas pode ser cortada */
+    /* ou */
+    background-size: contain; /* Ajusta a imagem para caber na seção sem cortar */
+    background-size: 100% 100%;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    padding: 20px; /* Espaçamento interno, ajuste conforme necessário */
+    color: rgb(255, 255, 255); /* Cor do texto, opcional */
+    height: 200px; /* Ajuste a altura conforme necessário */
+    overflow: hidden; /* Garante que nenhum conteúdo externo apareça */
+    top: -60px;
+}
+
+.imagem-fundo {
+    background-size: cover; /* A imagem cobre toda a seção, mas pode ser cortada */
+    background-size: 100% 100%;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: contain; /* Ajusta a imagem para caber na seção sem cortar */
+    position: absolute; /* Permite que a imagem da fita seja posicionada em relação à nova-secao */
+    top: 0px; /* Ajuste a posição vertical conforme necessário */
+    left: 0px; /* Ajuste a posição horizontal conforme necessário */
+    z-index: 1; /* Certifique-se de que a fita apareça acima da imagem de fundo */
+}
+
+h2, p, .box-exemplo {
+    position: relative; /* Garante que o texto fique acima da imagem de fundo */
+    z-index: 2; /* Certifique-se de que o texto apareça acima da imagem de fundo */
+    color: #000000;
+}
+
+
+
+
+
+
+
 .content {
-    margin-top: 100%; /* Adiciona margem no topo para evitar sobreposição com a barra fixa */
-    padding: 20px; /* Espaçamento interno */
-    background-color: #f4f4f4;
+    margin-top: 100%;
+    padding: 20px;
+    background-color: #b81919;
 }
 
-/* Container de filmes */
 .filme-container {
     max-width: 1200px;
     margin: 20px auto;
@@ -109,7 +175,7 @@ section {
     justify-content: space-between;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(203, 0, 0);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -132,74 +198,116 @@ section {
     flex-direction: row-reverse;
 }
 
-
-
-/*menu lateral*/
+/* Menu Lateral */
+/* Menu lateral fechado com borda invisível para interação */
 
 aside.menu-lateral {
-    
     position: fixed;
-    top: 23%;
+    top: 50px;
     left: 0;
-    height: 100%;
+    height: 80%;
     overflow: hidden;
-    
-    width: 15px;
-   
-    background-color: rgb(9, 2, 2) ;
+    width: 16px; /* Largura inicial do menu */
+    background-color: rgba(53, 51, 51, 0.584);
     padding: 40px 0 40px 1%;
-    box-shadow: 4px 0 0 rgb(83, 53, 67);
-    
+    box-shadow: 
+    4px 0 0 #E63946, /* Vermelho */
+    8px 0 0 #F1A7A1, /* Laranja */
+    12px 0 0 #F1D100, /* Amarelo */
+    16px 0 0 #4D9F9D, /* Verde */
+    20px 0 0 #0077B3, /* Azul */
+    24px 0 0 #6A2C91; /* Roxo */
     z-index: 1000;
-    transition: left 0.3s ease;
-
+    transition: width 0.3s ease; /* Transição suave para a largura */
+    transition: left 0.3s ease; /* Transição suave em 0.5s */
 }
 
+/* Expandindo o menu ao passar o mouse */
 aside.menu-lateral:hover {
-    width: 230px;
-  
+    width: 230px; /* Largura expandida do menu */
 }
 
-.btn-expandir > i{
+/* Opções inicialmente ocultas */
+.opcoes {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+/* Mostrando as opções quando o menu é expandido */
+aside.menu-lateral:hover .opcoes {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s; /* Opções aparecem imediatamente */
+}
+
+/* Botão para expandir */
+/* Centralizando o ícone */
+.btn-expandir {
+    position: absolute;
+    top: 10px; /* Ajuste conforme necessário */
+    left: 50%; /* Centro horizontalmente */
+    transform: translateX(-50%); /* Move o ícone para o centro exato */
+    padding: 5px;
+    z-index: 1100;
     cursor: pointer;
+}
+
+/* Estilo do ícone */
+.btn-expandir > i {
     font-size: 30px;
-    color: #554e4e
-    
+    color: #ffffff;
 }
 
-ul {
-   height: 100%;
+/* Estilo da lista de opções no menu lateral */
+.opcoes {
     list-style-type: none;
+    padding: 0;
+    margin: 40px 0;
 }
 
-
-
-.efeito a:hover {
-    transition: .2s;
-    background-color: rgb(181, 176, 51);
-   
-}
-
-
-
-
-ul a {
-    display: flex;
-    margin-bottom: 20px;
+/* Estilo dos links do menu lateral */
+.opcoes a {
+    display: block;
+    margin-bottom: 0px;
     font-size: 20px;
-    padding: 20px 4%;
+    padding: 10px;
     text-decoration: none;
-     color: white;
-     line-height: 20px;
-    
-     
-    }
-
-    
-ul a .txt-link {
-    margin-left: 40PX;
-   
+    color: white;
+    transition: background-color 0.2s;
 }
+
+/* Efeito hover nos links */
+.opcoes a:hover {
+    background-color: rgb(120, 197, 241); /* Cor de fundo ao passar o mouse */
+}
+
+.rede-sociais {
+    list-style-type: none;
+    padding: 0;
+    margin: 2px 0;
+}
+
+/* Estilo dos links do menu lateral */
+.rede-sociais a {
+    display: block;
+    margin-bottom: 5px; /* Espaço entre os itens */
+    font-size: 20px;
+    padding: 10px 15px; /* Ajuste no padding */
+    text-decoration: none;
+    color: white;
+    background-color: transparent; /* Evita cor de fundo inesperada */
+    border-radius: 8px; /* Canto levemente arredondado */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Efeito hover nos links */
+.rede-sociais a:hover {
+   
+    box-shadow: 0 -2px -3px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
 .apresentacao {
     position: relative;
     border-radius: 15px;
@@ -207,8 +315,262 @@ ul a .txt-link {
     left: 60%;
 }
 
-.hellas {
+.hellas-container {
     position: relative;
-    left: 100px;
-    top: -200px;
+    left: 0px;
+    top: 10px;
+}
+
+.logo {
+    position: relative; /* Necessário para usar top */
+    display: flex;
+    flex-direction: row; /* Organiza na horizontal */
+    align-items: center; /* Alinha ao centro verticalmente */
+    gap: 30px; /* Espaço entre as imagens */
+    margin: 0; /* Remove margens padrão ao redor */
+    top:-70px; /* Ajuste fino para controle da posição vertical */
+}
+
+
+/* Carossel de fotos*/
+
+.principal-carrossel {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px; /* Adiciona espaçamento interno */
+    
+    border-radius: 2px; /* Cantos arredondados */
+   
+}
+
+.carrossel {
+    position: relative;
+    top: -250px;
+    width:2000px; /* Ocupa toda a largura disponível */
+    height: 600px; /* Altura fixa */
+    overflow: hidden; /* Impede que o conteúdo saia da borda */
+    border: 1px solid #942222;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px; /* Espaço entre as imagens */
+    justify-content: center;
+    align-items: center;
+}
+   
+    
+  
+    
+
+
+/* Estilo das imagens no carrossel */
+.carrossel img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura */
+    object-fit: cover; /* A imagem preenche sem distorcer */
+}
+
+.daniel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.daniel.active {
+    opacity: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+button {
+    background-color: var(--primary-color);
+    color: rgb(173, 37, 37);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55d51;
+}
+
+/* Slider */
+
+
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Efeito hover em imagens */
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+span {
+    font-size: 18px;
+    color: #333;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+/*sessão dos curtas*/
+
+
+
+#video-player {
+    position: relative;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;
+    max-width: 100%; /* Para não exceder a largura do contêiner */
+    overflow: hidden; /* Impede que o vídeo "vaze" */
+     
+}
+
+.video-container {
+    position: relative;
+    width: 100%; /* Largura total do contêiner */
+    padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+    height: 0; /* Altura inicial zero */
+}
+
+.player-principal {
+    position: absolute;
+    top: 195px;
+    left: 50%; /* Move para 50% da largura do contêiner */
+    transform: translateX(-50%); /* Ajusta para centralizar */
+    width: 700px; /* Largura total do contêiner */
+    height: 350px; /* Altura total do contêiner */
+}
+
+#thumbnails {
+    display: flex;              /* Ativa o flexbox */
+    justify-content: center;    /* Centraliza horizontalmente */
+    flex-wrap: wrap;           /* Permite que as miniaturas se movam para a próxima linha */
+    margin: 19px 0;    
+    position: relative;
+    top: -10px;            /* Adiciona uma margem superior e inferior */
+    text-align: center; /* Centraliza as miniaturas e os botões */
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden; /* Esconde miniaturas que não estão na vista */
+    margin-bottom: 10px; /* Espaço entre as miniaturas e os botões */
+}
+
+.thumbnail {
+    display: none; /* Esconde todas as thumbnails inicialmente */
+    width: 200px; /* Ajuste o tamanho das miniaturas */
+    height: 150px; /* Ajuste a altura das miniaturas */
+    margin: 5px;
+}
+
+.thumbnail.active {
+    display: block; /* Mostra apenas as miniaturas ativas */
+}
+
+.button-container {
+    display: flex; 
+    justify-content: space-between; /* Coloca os botões nos extremos */
+    width: 60%; /* Faz os botões ocuparem a largura total */
+    position: relative; /* Para permitir o posicionamento absoluto, se necessário */
+}
+
+
+#prev {
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+#next {
+    align-self: flex-end; /* Alinha o botão à direita */
+}
+footer {
+    background-color: var(--secondary-color);
+    color: rgb(0, 0, 0);
+    margin: -20;
+    padding: 0px 0; /* Espaço interno menor */
+    text-align: center;
+    height: -20px; /* Ajusta a altura do rodapé */
+    line-height: 40px; /* Centraliza o texto verticalmente */
 }
