@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@ EXISTE NO ARQUIVO DO CSS-->
      <!-- Diminuir a largura do menu fixo no topo da página, organizar as opções para que els tenha a mesma distância-->
       <!--ver cor adequada para letra e o background, dar algum efeito para as opções do menu ao passar o mouse, logos de rede sociais tbm-->
  
-      <header  id="header-container" class="header-container"> 
+      <header  id="header-container" class="header-container">
 
            
 
@@ -58,32 +58,16 @@ EXISTE NO ARQUIVO DO CSS-->
                     <a href="#" onclick="mostrarSecao('secao3')">Curtas</a>
                     <a href="#" onclick="mostrarSecao('secao4')">Web Séries</a>
                     <a href="#" onclick="mostrarSecao('secao5')">Diretor</a>
+                    <a href="#" onclick="mostrarSecao('secao6')">Filmografia</a>
                     <a href="#contato">Contato</a>
 
                 </div>
                   
                 </ul>
             </nav>
+       
         </header>
 
-
-          <!-- Menu Lateral -->
-           <!--Organizar as opções para que mostrem todas por igual, arrumar o tamanho que abre e a largura que
-           fica o menu para que fechado ele cubra informações da página-->
-           <!--Trocar cor do menu e da borda dele, trocar cor da transição de quando o mouse passa -->
-           <aside id="menu-lateral" class="menu-lateral">
-            <div class="btn-expandir">
-                <i class="bi bi-list"></i>
-            </div>
-            <ul class="opcoes">
-                <li><a href="#" onclick="mostrarSecao('filmografia')">FILMOGRAFIA</a></li>
-                <li><a href="#" onclick="mostrarSecao('festivais')">FESTIVAIS</a></li>
-                <li><a href="#" onclick="mostrarSecao('secao2')">CURSOS</a></li>
-                <li><a href="#" onclick="mostrarSecao('secao4')">WEB SÉRIES</a></li>
-                <li><a href="#">O DIRETOR</a></li>
-                <li><a href="#">CURTAS</a></li>
-            </ul>
-        </aside>
         
 
 
@@ -99,79 +83,132 @@ EXISTE NO ARQUIVO DO CSS-->
        
             <section id="secao1" class="secao" >
              
-        
-                
-                    <div class="principal-carossel">
-                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1100px" height="570px"></div>
-                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.42.jpeg" width="1100px" height="570px"></div>
-                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (1).jpeg" width="1100px" height="570px"></div>
-                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (2).jpeg" width="1100px" height="570px"></div>
-                        <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45.jpeg" width="1100px" height="570px"></div>
-                    </div>
-                
-        
-                <div class="hellas-container" style="background-color: aquamarine;">
-                    <img class="apresentacao" src="diretor/Diretor.jpeg" height="400px" width="359px">
-                    <h2>Hellas Filmes</h2>
-                    <p class="letra">
-                        Somos uma produtora de filmes e séries e<br>
-                        Escola de Atores para o Audiovisual.<br>
-                        Com trabalhos desenvolvidos com alunos e<br>
-                        profissionais qualificados no mercado de<br>
-                        trabalho do Rio de Janeiro, São Paulo e Porto Alegre.
-                    </p>
+
+                <div id="principal-carossel" class="principal-carossel" width="1500px" height="650px">
+                    <div class="daniel"><img src="imagens_carrossel/4C5F9DFC-287D-4B0C-B08F-5153A620FCA8.jpg" width="1500px"  height="650px"></div>
+                    <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (1).jpeg" width="1500px" height="650px"></div>
+                    <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-09-25 at 15.03.45 (2).jpeg" width="1500px"  height="650px"></div>
+                    <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-10-27 at 23.30.07.jpeg" width="1500px"  height="650px"></div>
+                    <div class="daniel"><img src="imagens_carrossel/WhatsApp Image 2024-10-28 at 11.25.33.jpeg" width="1500px" height="650px"></div>
+                    <div class="daniel"><img src="imagens_carrossel/maquiagem.jpg" width="1400px" height="650px"></div>
                 </div>
+
+
+                
+                <div class="hellas-container" style="background-color: #6b6969; ">
+                    <img class="apresentacao" src="logo/Logo Hellas - capacete.png" height="300px" width="240px">
+                    <div class="texto-container">
+                        
+                       
+                        <p class="letra">
+                            Somos uma produtora de filmes e séries e<br>
+                            Escola de Atores para o Audiovisual.<br>
+                            Com trabalhos desenvolvidos com alunos e<br>
+                            profissionais qualificados no mercado de<br>
+                            trabalho do Rio de Janeiro, São Paulo e Porto Alegre.
+                        </p>
+
+                    </div>
+                    
+                </div>
+                
+
+                   
         
-                <div class="filme-container" style="background-color: #f8d7da;">
+               
+                <div class="filme-container" style=" background-color: #e8e8e8;">
                     <div class="filme">
-                        <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
+                        <img src="filmes/ARTE PRÊMIOS/HELLAS 01.jpg" alt="Poster do Filme 1" class="poster" width="450px" height="380px">
                         <div class="sinopse">
                             <h2>Filme 1</h2>
                             <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                     </div>
-                    <div class="filme inverso">
+                    <div class="filme">
                         <div class="sinopse">
                             <h2>Filme 2</h2>
                             <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                        <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
+                        <img src="filmes/ARTE PRÊMIOS/HELLAS 02.jpg" alt="Poster do Filme 2" class="poster" width="380px" height="430px">
                     </div>
         
                     <div class="filme">
-                        <img src="imagens.inicio/Stanislavski.jpg" alt="Poster do Filme 1" class="poster">
+                        <img src="filmes/ARTE PRÊMIOS/HELLAS 03.jpg" alt="Poster do Filme 1" class="poster" width="380px" height="430px">
                         <div class="sinopse">
                             <h2>Filme 1</h2>
                             <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                     </div>
-                    <div class="filme inverso">
+                    <div class="filme">
+                        <div class="sinopse">
+                            <h2>Filme 2</h2>
+                            <p class="estilo">Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <img src="filmes/ARTE PRÊMIOS/HELLAS 04.jpg" alt="Poster do Filme 2" class="poster" width="380px" height="430px">
+                    </div>
+                    <div class="filme">
+                        <img src="filmes/ARTE PRÊMIOS/HELLAS 05.jpg" alt="Poster do Filme 1" class="poster" width="380px" height="430px">
+                        <div class="sinopse">
+                            <h2>Filme 1</h2>
+                            <p>Esta é a sinopse do Filme 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="filme">
                         <div class="sinopse">
                             <h2>Filme 2</h2>
                             <p>Esta é a sinopse do Filme 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                        <img src="imagens.inicio/Shakespeare.jpg" alt="Poster do Filme 2" class="poster">
+                        <img src="filmes/ARTE PRÊMIOS/HELLAS 06.jpg" alt="Poster do Filme 2" class="poster" width="380px" height="430px">
                     </div>
+
+
                 </div>
         
-                <div id="contato" style="background-color: #d3cce3;">
-                    <h2>Contato</h2>
-                    <p>Email: contato@hellasfilmes.com</p>
-                    <p>Telefone: (XX) XXXX-XXXX</p>
-                    <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+                <div class="contato">
+                    <div class="contato-container" width="1300px" higth="700px">
+                        <div class="contato-info">
+                            <h2>Informações de Contato</h2>
+                            <p><strong>Endereço:</strong> Rua Exemplo, 123, Cidade, Estado</p>
+                            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+                            <p><strong>Email:</strong> ludmila.reis2143@gmail.com</p>
+                            <p>Estamos à disposição para ajudar. Envie-nos uma mensagem ou <br>
+                             entre em contato pelos canais acima.</p>
+                        </div>
+                        <div class="form-contato">
+                            <h2>Formulário de Contato</h2>
+                            <form action="enviar_email.php" method="post">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" required>
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                
+                                <label for="mensagem">Mensagem:</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                                
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+                    </div>
                 </div>
+                
+                    
+                
             </section>
         
-            <section id="secao2" class="secao" style="background-color: #e2e3e5;">
-                <h2>OFICINA DE WEB SÉRIE</h2>
-                <h1>Conheça nossos projetos e cursos abertos e saiba mais sobre eles!</h1>
-                <p>
+            <section id="secao2" class="secao" style="background-color: #398cc7;">
+
+               <div class="curso-container">  <h2 class="cursos">CURSOS E PROJETOS</h2>
+                <h1 class="projetos">Conheça nossos projetos e cursos abertos e saiba mais sobre eles!</h1>
+                <p class="alunos">
                     Você e mais um grupo de 08 a 12 integrantes desenvolvem a preparação online de um roteiro de <br>
                     web série escrito sob medida para vocês. Como conclusão, após o oito encontros, vocês gravam a <br>
                     série em diárias combinadas entre o grupo no Rio de Janeiro ou na cidade onde os integrantes <br>
                     contratarem o projeto. Início na segunda semana de março de 2021. Gravações previstas para <br>
                     acontecerem entre maio e junho de 2021. Maiores detalhes para esse projeto chamar pelo WhatsApp: (11) 99353-8483
                 </p>
+             </div>
+
             </section>
         
             
@@ -242,27 +279,93 @@ EXISTE NO ARQUIVO DO CSS-->
                </p>
         </section>
 
-        <section id="filmografia" class="secao">
-            <h2>filmografia</h2>
-            <p>Filmes</p>
+        <section id="secao6" class="secao">
+            <div class="filmografia-container">
+                <h1 class="filmografia">FILMOGRAFIA</h1>
+        
+                <section class="year">
+                    <h2 class="ano">2016</h2>
+                    <ul class="ordenada">
+                        <li class="lista">
+                            <span onclick="showModal('Filme 1', 'Descrição do Filme 1 de 2016.', 'capa_filme1_2016.jpg')">Filme 1</span>
+                            <img src="capa_filme1_2016.jpg" alt="Capa do Filme 1" onclick="showModal('Filme 1', 'Descrição do Filme 1 de 2016.', 'capa_filme1_2016.jpg')"  class="capa">
+                        </li>
+                        <li class="lista">
+                            <span onclick="showModal('Filme 2', 'Descrição do Filme 2 de 2016.', 'capa_filme2_2016.jpg')">Filme 2</span>
+                            <img src="capa_filme2_2016.jpg" alt="Capa do Filme 2" onclick="showModal('Filme 2', 'Descrição do Filme 2 de 2016.', 'capa_filme2_2016.jpg')"  class="capa">
+                        </li>
+                    </ul>
+                </section>
+        
+                <section class="year">
+                    <h2 class="ano">2017</h2>
+                    <ul class="ordenada">
+                        <li class="lista">
+                            <span onclick="showModal('Filme 3', 'Descrição do Filme 3 de 2017.', 'capa_filme1_2017.jpg')">Filme 3</span>
+                            <img src="capa_filme1_2017.jpg" alt="Capa do Filme 3" onclick="showModal('Filme 3', 'Descrição do Filme 3 de 2017.', 'capa_filme1_2017.jpg')"  class="capa">
+                        </li>
+                        <li class="lista">
+                            <span onclick="showModal('Filme 4', 'Descrição do Filme 4 de 2017.', 'capa_filme2_2017.jpg')">Filme 4</span>
+                            <img src="capa_filme2_2017.jpg" alt="Capa do Filme 4" onclick="showModal('Filme 4', 'Descrição do Filme 4 de 2017.', 'capa_filme2_2017.jpg')"  class="capa">
+                        </li>
+                    </ul>
+                </section>
+        
+                <section class="year">
+                    <h2 class="ano">2018</h2>
+                    <ul class="ordenada">
+                        <li class="lista">
+                            <span onclick="showModal('Filme 5', 'Descrição do Filme 5 de 2018.', 'capa_filme1_2018.jpg')">Filme 5</span>
+                            <img src="capa_filme1_2018.jpg" alt="Capa do Filme 5" onclick="showModal('Filme 5', 'Descrição do Filme 5 de 2018.', 'capa_filme1_2018.jpg')"  class="capa">
+                        </li>
+                    </ul>
+                </section>
+        
+                <section class="year">
+                    <h2 class="ano">2019</h2>
+                    <ul class="ordenada">
+                        <li class="lista">
+                            <span onclick="showModal('Filme 6', 'Descrição do Filme 6 de 2019.', 'capa_filme1_2019.jpg')">Filme 6</span>
+                            <img src="capa_filme1_2019.jpg" alt="Capa do Filme 6" onclick="showModal('Filme 6', 'Descrição do Filme 6 de 2019.', 'capa_filme1_2019.jpg')"  class="capa">
+                        </li>
+                        <li class="lista">
+                            <span onclick="showModal('Filme 7', 'Descrição do Filme 7 de 2019.', 'capa_filme2_2019.jpg')">Filme 7</span>
+                            <img src="capa_filme2_2019.jpg" alt="Capa do Filme 7" onclick="showModal('Filme 7', 'Descrição do Filme 7 de 2019.', 'capa_filme2_2019.jpg')"   class="capa">
+                        </li>
+                    </ul>
+                </section>
+        
+                <section class="year">
+                    <h2 class="ano">2020</h2>
+                    <ul class="ordenada">
+                        <li class="lista">
+                            <span onclick="showModal('Filme 8', 'Descrição do Filme 8 de 2020.', 'capa_filme1_2020.jpg')">Filme 8</span>
+                            <img src="capa_filme1_2020.jpg" alt="Capa do Filme 8" onclick="showModal('Filme 8', 'Descrição do Filme 8 de 2020.', 'capa_filme1_2020.jpg')"  class="capa">
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        
+            <!-- Modal -->
+            <div id="movieModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modalTitle">Título do Filme</h2>
+                    <p id="modalDescription">Descrição do filme.</p>
+                    <img id="modalImage" src="" alt="Capa do Filme">
+                </div>
+            </div>
         </section>
 
-        <section id="festivais" class="secao">
-            <h2>FESTIVAIS</h2>
-            <p>ACABA PELO AMOR DE DEUSSSS</p>
-        </section>
+ 
 
-        </section>
+    
    
 
 
   
     
-    <!-- Filmes -->
     
-    <!-- Contato -->
-  
-    <!-- Script para carregamento dinâmico de páginas -->
     
       
 
@@ -275,3 +378,4 @@ EXISTE NO ARQUIVO DO CSS-->
    
       </body>
 </html>
+

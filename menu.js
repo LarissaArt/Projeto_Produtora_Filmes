@@ -8,61 +8,49 @@ function mostrarSecao(secaoId) {
 
     // Mostrar apenas a seção selecionada
     const secaoSelecionada = document.getElementById(secaoId);
-    secaoSelecionada.classList.add('ativa');
+    if (secaoSelecionada) {
+        secaoSelecionada.classList.add('ativa');
+    }
 }
 
+// Exemplo de como chamar a função ao clicar em links do menu
+document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('click', () => mostrarSecao(item.dataset.secaoId));
+});
 
-// Carrossel de fotos //
-
-const imagens = document.querySelectorAll('.daniel');
+// Carrossel de fotos
+const imagens = document.querySelectorAll('.daniel img');
 let index = 0;
 
 function mostrarProximaImagem() {
-imagens[index].classList.remove('active');
-index = (index + 1) % imagens.length;
-imagens[index].classList.add('active');
+    imagens[index].classList.remove('active');
+    index = (index + 1) % imagens.length;
+    imagens[index].classList.add('active');
 }
 
 setInterval(mostrarProximaImagem, 4000);
 
-
-
-
-// Menu fixo //
-
-
+// Menu fixo
 let lastScrollTop = 0;
 const topMenu = document.getElementById('header-container'); // Menu do topo
-const lateralMenu = document.getElementById('menu-lateral'); // Menu lateral
 
 window.addEventListener('scroll', function () {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop) {
         // Rolando para baixo - esconde os menus
-        topMenu.style.top = '-50px'; 
-        lateralMenu.style.left = '-100px'; 
+        topMenu.style.top = '-100px';
     } else if (currentScroll === 0) {
         // Quando chega ao topo da página - mostra os menus
-        topMenu.style.top = '0'; 
-        lateralMenu.style.left = '0'; 
+        topMenu.style.top = '0';
     }
 
     // Atualiza o último valor do scroll
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-
-
-    
-
-    
-
-
-    // Playlist do youtube //
-
-
-    const apiKey = 'SUA_API_KEY_AQUI'; // Substitua pela sua API Key
+// Playlist do youtube
+const apiKey = 'SUA_API_KEY_AQUI'; // Substitua pela sua API Key
 const playlistId = 'PLTsEQq4Ps9_osrT2AXCnRjI0UsuXqk8Td'; // ID da sua playlist
 const playlistContainer = document.getElementById('playlist');
 const player = document.getElementById('player');
@@ -103,7 +91,6 @@ function displayVideos(videos) {
 
 // Chama a função ao carregar a página
 fetchPlaylistVideos();
-
 
 let currentIndex = 0;
 const thumbnails = document.querySelectorAll('.thumbnail');
@@ -161,3 +148,24 @@ function addClickEvents() {
 
 // Inicializa mostrando as thumbnails iniciais
 showThumbnails();
+
+// SESSÃO FILMOGRAFIA
+const modal = document.getElementById("movieModal");
+const span = document.getElementsByClassName("close")[0];
+
+function showModal(title, description, image) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+    document.getElementById("modalImage").src = image;
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

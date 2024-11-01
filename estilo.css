@@ -1,30 +1,12 @@
-/* Estilo Global */ 
 
-
-
-/* Remover margens e preenchimentos padrão */
-
-
-/* O body ocupa toda a janela do navegador */
-html, body {
-    background-color: #0077B3;
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Garante que ocupe a altura total */
-    width: 100%; /* Garante que ocupe a largura total */
-    overflow-x: hidden; /* Evita rolagem horizontal */
-        box-sizing: border-box;
-    
-}
-
-
-/* O main ocupa toda a altura e largura da página */
 main {
-    min-height: 100vh; /* Garante que cubra toda a altura da janela */
-    width: 100%; /* Largura total da página */
+    min-height: 100vh; /* Garante que ocupe pelo menos a altura da tela */
+    width: 100%;
     padding-top: 100px; /* Espaço para o menu fixo */
     position: relative;
+    overflow-y: auto; /* Permite rolagem interna */
 }
+
 
 /* Menu principal*/
 
@@ -38,7 +20,7 @@ header {
     z-index: 1; /* Eleva o header sobre outros elementos */
     padding: 0; /* Remove qualquer espaço interno */
     margin: 0; /* Remove margem externa */
-    height: 50px; /* Define a altura do header */
+    height: 80px; /* Define a altura do header */
     box-sizing: border-box; /* Inclui padding e borda dentro da largura/altura */
 }
 
@@ -73,19 +55,19 @@ nav ul {
 .social-media ul {
     display: flex;
     list-style: none;
-    padding: 5px;
+    padding: 7px;
     margin: 4px;
 }
 
 .social-media li {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .social-media img {
     width: 50px;
     height: 50px;
     object-fit: cover;
-    margin-top: -10px;
+    margin-top: -1px;
 }
 
 
@@ -94,7 +76,7 @@ nav ul {
 
 #secao1 {
     height: 100%;
-    background-color: rgb(54, 127, 186);
+    background-color: rgb(228, 234, 237);
 }
 
 #secao3 {
@@ -103,7 +85,7 @@ nav ul {
     height: auto; /* Altere para um valor fixo se desejar uma altura específica */
     padding: 20px; /* Espaço interno dentro da seção */
     margin: 20px auto; /* Margem superior/inferior de 20px e centraliza a seção horizontalmente */
-    border: 40px solid #ffffff; /* Adiciona uma borda para visualização (opcional) */
+    border: 40px solid #051835; /* Adiciona uma borda para visualização (opcional) */
     
 
     background-image: url('sessao_curtas/filme img.jpg'); /* Substitua pelo caminho da sua imagem */
@@ -117,21 +99,7 @@ nav ul {
 }
 
 
-.nova-secao  {
-    position: relative; /* Permite posicionar elementos filhos em relação a este elemento */
-   
-    background-size: cover; /* A imagem cobre toda a seção, mas pode ser cortada */
-    /* ou */
-    background-size: contain; /* Ajusta a imagem para caber na seção sem cortar */
-    background-size: 100% 100%;
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    padding: 20px; /* Espaçamento interno, ajuste conforme necessário */
-    color: rgb(255, 255, 255); /* Cor do texto, opcional */
-    height: 200px; /* Ajuste a altura conforme necessário */
-    overflow: hidden; /* Garante que nenhum conteúdo externo apareça */
-    top: -60px;
-}
+
 
 .imagem-fundo {
     background-size: cover; /* A imagem cobre toda a seção, mas pode ser cortada */
@@ -148,7 +116,7 @@ nav ul {
 h2, p, .box-exemplo {
     position: relative; /* Garante que o texto fique acima da imagem de fundo */
     z-index: 2; /* Certifique-se de que o texto apareça acima da imagem de fundo */
-    color: #000000;
+    color: #843939;
 }
 
 
@@ -160,43 +128,265 @@ h2, p, .box-exemplo {
 .content {
     margin-top: 100%;
     padding: 20px;
-    background-color: #b81919;
+    background-color: #9c2626;
 }
 
-.filme-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+
+ 
+
+/* Estilo Global */
+/* Remover margens e preenchimentos padrão */
+
+/* O body ocupa toda a janela do navegador */
+html, body {
+    background-color: #003366;;
+    margin: 0;
+    padding: 0;
+    height: auto; /* Mantenha como 'auto' */
+    width: 100%; 
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+    box-sizing: border-box;
 }
+
+/* Carrossel de fotos */
+.principal-carrossel {
+    position: relative;
+    top: 0;
+    height: 700px; /* Altura fixa para o carrossel */
+    overflow: hidden; /* Impede que o conteúdo saia da borda */
+    background-color: #f0f0f0; /* Cor de fundo do carrossel */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do carrossel (aproximadamente 2 dados) */
+}
+
+
+
+.daniel {
+    display: flex;
+    gap: 10px; /* Espaço entre as imagens */
+    justify-content: center;
+    align-items: center;
+}
+
+.daniel img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura */
+    object-fit: cover; /* A imagem preenche sem distorcer */
+    display: none; /* Esconde todas as imagens por padrão */
+}
+
+.daniel img.active {
+    display: block; /* Mostra a imagem ativa */
+}
+
+/* hellas */
+.hellas-container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 100%; /* Faz a div ocupar toda a largura disponível */
+    height: 500px; /* Define a altura desejada */
+    margin-top: 20px; /* Adiciona espaço acima do container hellas */
+}
+
+.letra {
+    color: #003366;
+}
+
+
+
+.apresentacao:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.texto-container {
+    border: 8px solid #ffffff; /* Borda branca */
+    padding: 40px; /* Espaço entre o texto e a borda (aproximadamente 2 dedos) */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+    margin: 10px; /* Espaço externo (opcional) */
+    font-family: 'Arial', sans-serif; /* Substitua por outra fonte se desejar */
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #2c3e50; /* Cor do texto */
+}
+
+
+
+/* filmes */
+.filme-container {
+    display: flex;
+    flex-direction: column; /* Alinha os filmes verticalmente */
+    width: 100%; /* Faz a div ocupar toda a largura da página */
+    padding: 0; /* Remove padding */
+    margin-bottom: 20px; /* Adiciona margem inferior para distanciar do contato */
+}
+
 
 .filme {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: rgb(203, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: row; /* Coloca imagem e sinopse lado a lado */
+    width: 100%;
+    padding: 0;
+    margin-top: 40px; /* Margem superior */
+   
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaça os itens */
+    background-color: #398cc7;/* Cinza claro */
+    border: 1px solid #D3D3D3; /* Borda sutil para destaque */
+    border-radius: 8px; /* Bordas arredondadas */
 }
 
-.filme img {
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
+.poster {
+  border-radius: 2px;
+
+   
+   
+}
+
+.estilo {
+    color: #003366;
+
 }
 
 .sinopse {
-    max-width: 60%;
+    flex: 2; /* Permite que a sinopse ocupe mais espaço */
+    padding: 20px; /* Espaço interno */
+    color: #003366;/* Cor do texto */
 }
 
-.sinopse h2 {
-    margin-top: 0;
+/* Para intercalar a ordem */
+.filme:nth-child(even) {
+    flex-direction: row-reverse; /* Inverte a ordem para os itens pares */
 }
 
-.inverso {
-    flex-direction: row-reverse;
+
+
+/* contato */
+.contato {
+    position: relative;
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 50px 20px; /* Espaçamento lateral */
+    background-color: #003366; /* Cor de fundo da seção contato */
+    color: #D3D3D3;/* Texto escuro para contraste */
+   
 }
+
+.contato-container {
+    display: flex; /* Define um contêiner flexível */
+    justify-content: space-between; /* Espaço entre os itens */
+}
+
+/* Formatação adicional */
+label, input, textarea {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border: none;
+    background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF); ;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/*SECAO2 CURSOS E WORKSHOPS*/
+.curso-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px; /* Espaçamento interno */
+}
+
+.conteudo-secao {
+  
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.cursos {
+    color: #003366; /* Azul escuro */
+    border: 2px solid white; /* Borda branca */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.projetos {
+    color: #00509e; /* Azul mais claro */
+    text-align: center; /* Centraliza o texto */
+}
+
+.alunos {
+    color: #333; /* Texto em cinza escuro */
+    border: 1px solid white; /* Borda branca */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaço acima do parágrafo */
+}
+
+
+
+/*menu principal*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0; /* Alinha o header à esquerda da página */
+    width: 100%; /* Ocupa 100% da largura da janela */
+    background-color: #003366;/* Fundo semi-transparente */
+    z-index: 1; /* Eleva o header sobre outros elementos */
+    padding: 0; /* Remove qualquer espaço interno */
+    margin: 0; /* Remove margem externa */
+    height: 80px; /* Define a altura do header */
+    box-sizing: border-box; /* Inclui padding e borda dentro da largura/altura */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seção Ativa */
+.secao {
+    display: none;
+    padding: 10px 20px;
+    margin-top: 80px;
+}
+
+.ativa {
+    display: block;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--secondary-color);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    height: 40px; /* Ajusta a altura do rodapé */
+    line-height: 40px; /* Centraliza o texto verticalmente */
+}
+
+
+
 
 /* Menu Lateral */
 /* Menu lateral fechado com borda invisível para interação */
@@ -308,18 +498,11 @@ aside.menu-lateral:hover .opcoes {
     box-shadow: 0 -2px -3px rgba(0, 0, 0, 0.15); /* Sombra suave */
 }
 
-.apresentacao {
-    position: relative;
-    border-radius: 15px;
-    top: 100px;
-    left: 60%;
-}
 
-.hellas-container {
-    position: relative;
-    left: 0px;
-    top: 10px;
-}
+
+
+
+
 
 .logo {
     position: relative; /* Necessário para usar top */
@@ -330,67 +513,6 @@ aside.menu-lateral:hover .opcoes {
     margin: 0; /* Remove margens padrão ao redor */
     top:-70px; /* Ajuste fino para controle da posição vertical */
 }
-
-
-/* Carossel de fotos*/
-
-.principal-carrossel {
-    max-width: 1200px; /* Largura máxima do container */
-    margin: 0 auto; /* Centraliza o container */
-    padding: 20px; /* Adiciona espaçamento interno */
-    
-    border-radius: 2px; /* Cantos arredondados */
-   
-}
-
-.carrossel {
-    position: relative;
-    top: -250px;
-    width:2000px; /* Ocupa toda a largura disponível */
-    height: 600px; /* Altura fixa */
-    overflow: hidden; /* Impede que o conteúdo saia da borda */
-    border: 1px solid #942222;
-    border-radius: 10px;
-    display: flex;
-    gap: 10px; /* Espaço entre as imagens */
-    justify-content: center;
-    align-items: center;
-}
-   
-    
-  
-    
-
-
-/* Estilo das imagens no carrossel */
-.carrossel img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura */
-    max-height: 100%; /* Garante que a imagem não ultrapasse a altura */
-    object-fit: cover; /* A imagem preenche sem distorcer */
-}
-
-.daniel {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-.daniel.active {
-    opacity: 100;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -454,33 +576,14 @@ button:hover {
     height: auto;
 }
 
-/* Rodapé */
-footer {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
 
 /* Efeito hover em imagens */
-img:hover {
+.poster {
+    border-radius: 2px;
+}
+
+.poster:hover{
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
@@ -492,7 +595,9 @@ span {
 }
 /*sessão dos curtas*/
 
-
+p {
+    color: white;
+}
 
 #video-player {
     position: relative;
@@ -514,7 +619,7 @@ span {
 
 .player-principal {
     position: absolute;
-    top: 195px;
+    top: 400px;
     left: 50%; /* Move para 50% da largura do contêiner */
     transform: translateX(-50%); /* Ajusta para centralizar */
     width: 700px; /* Largura total do contêiner */
@@ -565,6 +670,97 @@ span {
 #next {
     align-self: flex-end; /* Alinha o botão à direita */
 }
+
+
+
+
+/*FILMOGRAFIA*/
+
+.filmografia-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: blue;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(4, 255, 255, 0.473);
+    border-radius: 8px;
+}
+
+.filmografia {
+    text-align: center;
+    font-size: 3em; /* Tamanho aumentado */
+    color: #015db9;
+    margin-bottom: 20px;
+}
+
+.year {
+    margin-bottom: 40px;
+}
+
+.ano {
+    font-size: 2.5em;
+    color: #5201f5;
+    margin-bottom: 15px;
+}
+
+.ordenada {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid responsivo */
+    gap: 20px; /* Espaçamento */
+}
+
+.lista {
+    text-align: center;
+    transition: transform 0.2s; /* Transição suave */
+}
+
+.lista:hover {
+    transform: scale(1.05); /* Efeito hover */
+}
+
+.capa {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #63767a;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(211, 103, 103);
+    background-color: rgba(199, 8, 8, 0.644); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #2aa03d;
+    width: 80%; 
+}
+
+.close {
+    color: #0ca813;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(165, 39, 98);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 footer {
     background-color: var(--secondary-color);
     color: rgb(0, 0, 0);
