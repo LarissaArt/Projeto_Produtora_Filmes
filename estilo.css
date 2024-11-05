@@ -231,13 +231,17 @@ html, body {
    
     align-items: center; /* Centraliza verticalmente */
     justify-content: space-between; /* Espaça os itens */
-    background-color: #398cc7;/* Cinza claro */
+    background-color: #eaeaea;/* Cinza claro */
     border: 1px solid #D3D3D3; /* Borda sutil para destaque */
     border-radius: 8px; /* Bordas arredondadas */
 }
 
 .poster {
-  border-radius: 2px;
+ 
+  display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre cada filme */
+    padding: 20px;
 
    
    
@@ -251,7 +255,15 @@ html, body {
 .sinopse {
     flex: 2; /* Permite que a sinopse ocupe mais espaço */
     padding: 20px; /* Espaço interno */
-    color: #003366;/* Cor do texto */
+    color: #000000;/* Cor do texto */
+}
+
+.sinopse1 {
+    color: #000000;
+}
+
+img {
+    border-radius: 3px;
 }
 
 /* Para intercalar a ordem */
@@ -303,12 +315,45 @@ input[type="submit"]:hover {
 
 
 /*SECAO2 CURSOS E WORKSHOPS*/
-.curso-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 40px; /* Espaçamento interno */
-}
+    .secao2 {
+        margin: 0 auto;
+        background: #398cc7; /* Cor de fundo */
+        padding: 30px; /* Espaçamento interno */
+        box-shadow: 0 4px 20px rgba(4, 255, 255, 0.473); /* Sombra */
+        border-radius: 8px; /* Bordas arredondadas */
+        max-width: 20px; /* Largura máxima */
+    }
+    
+    .curso-container {
+        display: flex;
+        flex-direction: column; /* Alinha itens em coluna */
+        align-items: center; /* Centraliza os itens */
+        width: 100%; /* Usa 100% da largura do contêiner pai */
+        margin: -5px auto; /* Margem superior de 100px */
+        padding: 0 -10px; /* Espaçamento nas laterais */
+    }
+    
+    .cursos, .alunos, .projetos {
+        text-align: center; /* Centraliza o texto */
+        width: 100%; /* Faz com que cada item use 100% da largura disponível */
+    }
+    
+  
+    
+    .projetos {
+        color: #00509e; /* Azul mais claro */
+        margin-bottom: 20px; /* Espaço abaixo do item */
+    }
+    
+    .alunos {
+        color: #ffffff; /* Texto em branco */
+        border: 50px solid white; /* Borda branca */
+        padding: 10px;
+        width: 600px;
+        height: 200px;
+        border-radius: 5px;
+    }
+    
 
 .conteudo-secao {
   
@@ -320,7 +365,7 @@ input[type="submit"]:hover {
 
 .cursos {
     color: #003366; /* Azul escuro */
-    border: 2px solid white; /* Borda branca */
+    border: 10px solid white; /* Borda branca */
     padding: 10px;
     border-radius: 5px;
     text-align: center; /* Centraliza o texto */
@@ -332,12 +377,15 @@ input[type="submit"]:hover {
 }
 
 .alunos {
-    color: #333; /* Texto em cinza escuro */
-    border: 1px solid white; /* Borda branca */
+    color: #ffffff; /* Texto em cinza escuro */
+    border: 10px solid white; /* Borda branca */
     padding: 15px;
     border-radius: 5px;
     text-align: center; /* Centraliza o texto */
     margin-top: 20px; /* Espaço acima do parágrafo */
+    margin-left: 40%;
+    height: 200px;
+    width: 500px;
 }
 
 
@@ -688,7 +736,7 @@ p {
 .filmografia {
     text-align: center;
     font-size: 3em; /* Tamanho aumentado */
-    color: #015db9;
+    color: #9eabb9;
     margin-bottom: 20px;
 }
 
@@ -698,7 +746,7 @@ p {
 
 .ano {
     font-size: 2.5em;
-    color: #5201f5;
+    color:  #a0a7ae;
     margin-bottom: 15px;
 }
 
