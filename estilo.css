@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 main {
     min-height: 100vh; /* Garante que ocupe pelo menos a altura da tela */
     width: 100%;
@@ -33,6 +35,7 @@ nav ul {
     margin: 0;
     padding: 0;
     max-width: 100%;
+ 
 }
 
 
@@ -314,80 +317,70 @@ input[type="submit"]:hover {
 }
 
 
-/*SECAO2 CURSOS E WORKSHOPS*/
-    .secao2 {
-        margin: 0 auto;
-        background: #398cc7; /* Cor de fundo */
-        padding: 30px; /* Espaçamento interno */
-        box-shadow: 0 4px 20px rgba(4, 255, 255, 0.473); /* Sombra */
-        border-radius: 8px; /* Bordas arredondadas */
-        max-width: 20px; /* Largura máxima */
-    }
-    
-    .curso-container {
-        display: flex;
-        flex-direction: column; /* Alinha itens em coluna */
-        align-items: center; /* Centraliza os itens */
-        width: 100%; /* Usa 100% da largura do contêiner pai */
-        margin: -5px auto; /* Margem superior de 100px */
-        padding: 0 -10px; /* Espaçamento nas laterais */
-    }
-    
-    .cursos, .alunos, .projetos {
-        text-align: center; /* Centraliza o texto */
-        width: 100%; /* Faz com que cada item use 100% da largura disponível */
-    }
-    
-  
-    
-    .projetos {
-        color: #00509e; /* Azul mais claro */
-        margin-bottom: 20px; /* Espaço abaixo do item */
-    }
-    
-    .alunos {
-        color: #ffffff; /* Texto em branco */
-        border: 50px solid white; /* Borda branca */
-        padding: 10px;
-        width: 600px;
-        height: 200px;
-        border-radius: 5px;
-    }
-    
-
-.conteudo-secao {
-  
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
-    padding: 20px;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+/* CURSOS E WORKSHOPS*/
+  /* Contêiner geral */
+/* Contêiner geral */
+.secao2 {
+    margin: 0 auto;
+    background: #398cc7; /* Cor de fundo */
+    padding: 30px; /* Espaçamento interno */
+    box-shadow: 0 4px 20px rgba(4, 255, 255, 0.473); /* Sombra */
+    max-width: 100%; /* Corrigido para largura total */
 }
 
-.cursos {
-    color: #003366; /* Azul escuro */
-    border: 10px solid white; /* Borda branca */
-    padding: 10px;
-    border-radius: 5px;
+/* Estilo para o contêiner da seção */
+.conteudo-secao {
+    background-color: rgba(10, 41, 88, 0.9); /* Fundo azul escuro com transparência */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estilo para o contêiner do curso */
+.curso-container {
+    display: flex; /* Utiliza Flexbox para alinhar os itens lado a lado */
+    align-items: flex-start; /* Alinha a imagem e o texto ao topo */
+    gap: 20px; /* Espaço entre a imagem e o conteúdo do texto */
+    width: 100%; /* Garante que ocupe 100% da largura do contêiner */
+}
+
+/* Estilo da imagem */
+.curso-imagem {
+    max-width: 200px; /* Define a largura máxima da imagem */
+    height: auto; /* A altura ajusta proporcionalmente */
+    border-radius: 5px; /* Borda arredondada para a imagem */
+}
+
+/* Estilo para os títulos */
+.cursos, .projetos {
     text-align: center; /* Centraliza o texto */
 }
 
+/* Estilo específico para o título de cursos */
+.cursos {
+    color: #585555; /* Cor cinza */
+    padding: 10px;
+    width: 100%; /* Ajuste para usar toda a largura disponível */
+}
+
+/* Estilo específico para o título de projetos */
 .projetos {
     color: #00509e; /* Azul mais claro */
-    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
+/* Estilo para o parágrafo */
 .alunos {
-    color: #ffffff; /* Texto em cinza escuro */
-    border: 10px solid white; /* Borda branca */
-    padding: 15px;
+    color: #ffffff; /* Texto em branco */
+    padding: 10px;
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima do parágrafo */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura */
     border-radius: 5px;
-    text-align: center; /* Centraliza o texto */
-    margin-top: 20px; /* Espaço acima do parágrafo */
-    margin-left: 40%;
-    height: 200px;
-    width: 500px;
+    word-wrap: break-word; /* Quebra palavras longas para ajustar */
+    overflow-wrap: break-word; /* Outra forma de quebrar palavras longas */
+    line-height: 1.5; /* Espaçamento entre as linhas */
 }
-
 
 
 /*menu principal*/
@@ -727,10 +720,11 @@ p {
 .filmografia-container {
     max-width: 900px;
     margin: 0 auto;
-    background: blue;
+    background: rgb(8, 8, 113);
     padding: 30px;
     box-shadow: 0 4px 20px rgba(4, 255, 255, 0.473);
     border-radius: 8px;
+    text-align: center;
 }
 
 .filmografia {
@@ -761,10 +755,19 @@ p {
 .lista {
     text-align: center;
     transition: transform 0.2s; /* Transição suave */
+    
 }
 
 .lista:hover {
     transform: scale(1.05); /* Efeito hover */
+}
+
+li {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
 }
 
 .capa {
@@ -807,6 +810,92 @@ p {
     color: rgb(165, 39, 98);
     text-decoration: none;
     cursor: pointer;
+}
+
+
+/*DIRETOR*/
+
+.secao5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative; /* Importante para o z-index */
+}
+
+.container5 {
+    width: 90%;
+    max-width: 700px;
+    background-color:rgba(10, 41, 88, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #eaeaea56;
+    overflow: hidden;
+    position: relative; /* Permite usar z-index para os elementos internos */
+    justify-content: center;
+}
+
+.profile-img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid #d1d1d159;
+    z-index: 5; /* Certifica que a imagem também esteja visível */
+    
+}
+
+
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+#secao5 .bio-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #666666;
+    text-align: justify;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    overflow-wrap: break-word;
+    position: relative;
+    z-index: 10; /* Coloca o texto à frente */
+}
+
+#secao5 .imdb-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #0073e6;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 10; /* Coloca o link à frente */
+}
+
+#secao5 .imdb-link:hover {
+    background-color: #0073e6;
+    color: #ee93935d;
+}
+
+
+
+.bio-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify; /* Justifica o texto */
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 footer {
