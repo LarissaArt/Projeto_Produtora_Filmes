@@ -49,105 +49,59 @@ window.addEventListener('scroll', function () {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-// Playlist do youtube
-const apiKey = 'SUA_API_KEY_AQUI'; // Substitua pela sua API Key
-const playlistId = 'PLTsEQq4Ps9_osrT2AXCnRjI0UsuXqk8Td'; // ID da sua playlist
-const playlistContainer = document.getElementById('playlist');
-const player = document.getElementById('player');
 
-// Função para buscar vídeos da playlist
-async function fetchPlaylistVideos() {
-    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=${playlistId}&key=${apiKey}`;
-    
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        displayVideos(data.items);
-    } catch (error) {
-        console.error('Erro ao buscar vídeos:', error);
-    }
-}
+// CURTAS E WEB
 
-// Função para exibir os vídeos na página
-function displayVideos(videos) {
-    videos.forEach(video => {
-        const videoId = video.snippet.resourceId.videoId;
-        const title = video.snippet.title;
-        const thumbnail = video.snippet.thumbnails.default.url;
 
-        const videoElement = document.createElement('div');
-        videoElement.innerHTML = `
-            <img src="${thumbnail}" alt="${title}" />
-            <p>${title}</p>
-        `;
+// Selecionando o iframe do player principal
+const mainPlayer = document.querySelector('.player-principal');
 
-        videoElement.addEventListener('click', () => {
-            player.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
-        });
-
-        playlistContainer.appendChild(videoElement);
-    });
-}
-
-// Chama a função ao carregar a página
-fetchPlaylistVideos();
-
-let currentIndex = 0;
+// Selecionando as miniaturas
 const thumbnails = document.querySelectorAll('.thumbnail');
-const thumbnailsPerPage = 3; // Número de thumbnails por página
-const mainPlayer = document.querySelector('.player-principal'); // Player principal
 
-// Função para mostrar as thumbnails da página atual
-function showThumbnails() {
-    // Esconde todas as thumbnails
-    thumbnails.forEach((thumbnail) => {
-        thumbnail.classList.remove('active');
-        thumbnail.style.display = 'none'; // Esconde as não usadas
-    });
-
-    // Mostra apenas as thumbnails da página atual
-    for (let i = currentIndex; i < currentIndex + thumbnailsPerPage; i++) {
-        if (thumbnails[i]) {
-            thumbnails[i].classList.add('active');
-            thumbnails[i].style.display = 'inline-block'; // Exibe as atuais
-        }
-    }
-
-    // Adiciona eventos de clique às thumbnails ativas
-    addClickEvents();
+// Função para mudar o vídeo principal
+function changeVideo(videoId) {
+    mainPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 }
 
-// Função para mudar de página
+// Adicionando evento de clique nas miniaturas
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+        const videoId = thumbnail.getAttribute('data-video-id');
+        changeVideo(videoId);
+    });
+});
+
+// Navegação de miniaturas (Caso você tenha mais de uma página de miniaturas)
+let currentIndex = 0;
+const thumbnailsPerPage = 3;  // Número de miniaturas por página
+
+// Função para exibir as miniaturas da página atual
+function showThumbnails() {
+    thumbnails.forEach((thumbnail, index) => {
+        if (index >= currentIndex && index < currentIndex + thumbnailsPerPage) {
+            thumbnail.style.display = 'inline-block';  // Mostrar a miniatura
+        } else {
+            thumbnail.style.display = 'none';  // Esconder a miniatura
+        }
+    });
+}
+
+// Função para navegar entre as páginas de miniaturas
 function changeThumbnails(direction) {
-    // Atualiza o índice atual
     currentIndex += direction * thumbnailsPerPage;
 
-    // Limita o índice dentro dos limites do array
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    }
-    if (currentIndex >= thumbnails.length) {
-        currentIndex = thumbnails.length - thumbnailsPerPage;
-    }
+    // Limitar a navegação dentro do número de miniaturas
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex >= thumbnails.length) currentIndex = thumbnails.length - thumbnailsPerPage;
 
-    // Atualiza a visualização das thumbnails
     showThumbnails();
 }
 
-// Função para adicionar eventos de clique nas thumbnails ativas
-function addClickEvents() {
-    const activeThumbnails = document.querySelectorAll('.thumbnail.active');
-    activeThumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', () => {
-            const videoId = thumbnail.getAttribute('data-video-id');
-            mainPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            mainPlayer.scrollIntoView({ behavior: 'smooth' }); // Opcional
-        });
-    });
-}
-
-// Inicializa mostrando as thumbnails iniciais
+// Exibir as miniaturas na página inicial
 showThumbnails();
+
+
 
 // SESSÃO FILMOGRAFIA
 const modal = document.getElementById("movieModal");
@@ -169,3 +123,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+// WEB SÉRIE 
+
+

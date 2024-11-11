@@ -43,7 +43,7 @@ nav ul {
 .secao {
     display: none;
     padding: 10px 20px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .ativa {
@@ -83,66 +83,16 @@ nav ul {
 }
 
 #secao3 {
-    width: 80%; /* Define a largura da seção. Altere para o valor desejado, como 100%, 50%, etc. */
-    max-width: 800px; /* Define uma largura máxima para não exceder esse tamanho */
-    height: auto; /* Altere para um valor fixo se desejar uma altura específica */
-    padding: 20px; /* Espaço interno dentro da seção */
-    margin: 20px auto; /* Margem superior/inferior de 20px e centraliza a seção horizontalmente */
-    border: 40px solid #051835; /* Adiciona uma borda para visualização (opcional) */
-    
-
-    background-image: url('sessao_curtas/filme img.jpg'); /* Substitua pelo caminho da sua imagem */
-    background-size: cover; /* Faz com que a imagem cubra toda a seção */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
-    padding: 20px; /* Adiciona um espaçamento interno, se necessário */
-   
-
-
+    background-color: rgba(10, 41, 88, 0.9);
 }
 
-
-
-
-.imagem-fundo {
-    background-size: cover; /* A imagem cobre toda a seção, mas pode ser cortada */
-    background-size: 100% 100%;
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-size: contain; /* Ajusta a imagem para caber na seção sem cortar */
-    position: absolute; /* Permite que a imagem da fita seja posicionada em relação à nova-secao */
-    top: 0px; /* Ajuste a posição vertical conforme necessário */
-    left: 0px; /* Ajuste a posição horizontal conforme necessário */
-    z-index: 1; /* Certifique-se de que a fita apareça acima da imagem de fundo */
-}
-
-h2, p, .box-exemplo {
-    position: relative; /* Garante que o texto fique acima da imagem de fundo */
-    z-index: 2; /* Certifique-se de que o texto apareça acima da imagem de fundo */
-    color: #843939;
-}
-
-
-
-
-
-
-
-.content {
-    margin-top: 100%;
-    padding: 20px;
-    background-color: #9c2626;
-}
-
-
- 
 
 /* Estilo Global */
 /* Remover margens e preenchimentos padrão */
 
 /* O body ocupa toda a janela do navegador */
 html, body {
-    background-color: #003366;;
+    background-color: #003366;
     margin: 0;
     padding: 0;
     height: auto; /* Mantenha como 'auto' */
@@ -151,6 +101,77 @@ html, body {
     box-sizing: border-box;
 }
 
+/* From Uiverse.io by 0800Gonza */ 
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 1s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: 0.3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: 0.3s;
+  }
+  /* Whatsapp*/
+  
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+  }
+  
+  .socialSvg {
+    width: 35px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(155, 148, 148);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
 /* Carrossel de fotos */
 .principal-carrossel {
     position: relative;
@@ -250,6 +271,10 @@ html, body {
    
 }
 
+.letra {
+    color: rgb(75, 11, 11);
+}
+
 .estilo {
     color: #003366;
 
@@ -262,7 +287,11 @@ html, body {
 }
 
 .sinopse1 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
     color: #000000;
+    font-size: 20px;
 }
 
 img {
@@ -284,6 +313,11 @@ img {
     background-color: #003366; /* Cor de fundo da seção contato */
     color: #D3D3D3;/* Texto escuro para contraste */
    
+}
+
+#contato {
+    padding-top: 60px; /* Ajuste este valor conforme necessário */
+    margin-top: -60px; /* Esse valor deve ser igual ou proporcional ao padding-top */
 }
 
 .contato-container {
@@ -358,28 +392,43 @@ input[type="submit"]:hover {
 
 /* Estilo específico para o título de cursos */
 .cursos {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;    /* Tamanho da fonte */
+    line-height: 1.5;   /* Espaço entre as linhas (1.5 vezes o tamanho da fonte) */
     color: #585555; /* Cor cinza */
     padding: 10px;
     width: 100%; /* Ajuste para usar toda a largura disponível */
+    border: 2px solid white; /* Borda branca ao redor */
+    padding: 3px; /* Espaçamento interno para afastar o texto da borda */
+    border-radius: 5px; /* Bordas levemente arredondadas (opcional) */
+
 }
 
 /* Estilo específico para o título de projetos */
 .projetos {
-    color: #00509e; /* Azul mais claro */
+    color: #315e8b; /* Azul mais claro */
     margin-bottom: 20px; /* Espaço abaixo do título */
+    border: 2px solid white; /* Borda branca ao redor */
+    padding: 10px; /* Espaçamento interno para afastar o texto da borda */
+    border-radius: 5px; /* Bordas levemente arredondadas (opcional) */
 }
 
 /* Estilo para o parágrafo */
 .alunos {
     color: #ffffff; /* Texto em branco */
-    padding: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    
     width: 100%;
     max-width: 600px; /* Limita a largura máxima do parágrafo */
     box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura */
-    border-radius: 5px;
+   
     word-wrap: break-word; /* Quebra palavras longas para ajustar */
     overflow-wrap: break-word; /* Outra forma de quebrar palavras longas */
-    line-height: 1.5; /* Espaçamento entre as linhas */
+   
+
+    border: 2px solid white; /* Borda branca ao redor */
+    padding: 10px; /* Espaçamento interno para afastar o texto da borda */
+    border-radius: 5px; /* Bordas levemente arredondadas (opcional) */
 }
 
 
@@ -411,6 +460,7 @@ nav ul {
     display: none;
     padding: 10px 20px;
     margin-top: 80px;
+   background-color:  rgba(10, 41, 88, 0.9);;
 }
 
 .ativa {
@@ -530,6 +580,7 @@ aside.menu-lateral:hover .opcoes {
     background-color: transparent; /* Evita cor de fundo inesperada */
     border-radius: 8px; /* Canto levemente arredondado */
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: -5px;
 }
 
 
@@ -577,7 +628,7 @@ a:hover {
 /* Botões */
 button {
     background-color: var(--primary-color);
-    color: rgb(173, 37, 37);
+    color: rgb(87, 86, 86);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -587,8 +638,16 @@ button {
 }
 
 button:hover {
-    background-color: #e55d51;
+    background-color: #9f8380;
 }
+
+
+.lgbtqia {
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+
+}
+
 
 /* Slider */
 
@@ -621,18 +680,20 @@ button:hover {
 
 /* Efeito hover em imagens */
 .poster {
-    border-radius: 2px;
+    border-radius: 15px;
 }
 
-.poster:hover{
+.poster:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
 }
 
 span {
     font-size: 18px;
     color: #333;
     transition: font-size 0.3s ease, color 0.3s ease;
+  
 }
 /*sessão dos curtas*/
 
@@ -641,30 +702,18 @@ p {
 }
 
 #video-player {
-    position: relative;
-    display: flex;              
-    justify-content: center;    
-    align-items: center;        
-    height: 100vh;
-    max-width: 100%; /* Para não exceder a largura do contêiner */
-    overflow: hidden; /* Impede que o vídeo "vaze" */
-     
+    width: 80%;                 /* Largura do contêiner em relação à tela (80% da largura da tela) */
+    max-width: 1000px;          /* Tamanho máximo da largura do vídeo */
+    position: relative;         /* Permite o ajuste do iframe dentro do contêiner */
+    margin-bottom: 20px;
 }
 
-.video-container {
-    position: relative;
-    width: 100%; /* Largura total do contêiner */
-    padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
-    height: 0; /* Altura inicial zero */
-}
-
+/* O iframe se adapta ao tamanho do contêiner */
 .player-principal {
-    position: absolute;
-    top: 400px;
-    left: 50%; /* Move para 50% da largura do contêiner */
-    transform: translateX(-50%); /* Ajusta para centralizar */
-    width: 700px; /* Largura total do contêiner */
-    height: 350px; /* Altura total do contêiner */
+    width: 100%;                /* Faz o iframe ocupar toda a largura do contêiner */
+    height: auto;               /* Ajusta a altura automaticamente para manter a proporção */
+    aspect-ratio: 16/9;         /* Garante que o vídeo tenha uma proporção de 16:9 (padrão do YouTube) */
+    border: none;               /* Remove a borda ao redor do iframe */
 }
 
 #thumbnails {
@@ -675,6 +724,7 @@ p {
     position: relative;
     top: -10px;            /* Adiciona uma margem superior e inferior */
     text-align: center; /* Centraliza as miniaturas e os botões */
+    margin-top: 20px;
 }
 
 .thumbnail-container {
@@ -683,6 +733,8 @@ p {
     flex-wrap: wrap;
     overflow: hidden; /* Esconde miniaturas que não estão na vista */
     margin-bottom: 10px; /* Espaço entre as miniaturas e os botões */
+    gap: 15px;  /* Espaçamento entre as miniaturas */
+    
 }
 
 .thumbnail {
@@ -712,7 +764,87 @@ p {
     align-self: flex-end; /* Alinha o botão à direita */
 }
 
+/*WEB SÉRIE*/
 
+.web {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;    /* Tamanho da fonte */
+    line-height: 1.5;   /* Espaço entre as linhas (1.5 vezes o tamanho da fonte) */
+    color: #585555; /* Cor cinza */
+    padding: 10px;
+    width: 100%; /* Ajuste para usar toda a largura disponível */
+    text-align: center;
+    border: 2px solid white; /* Borda branca ao redor */
+    padding: 3px; /* Espaçamento interno para afastar o texto da borda */
+    border-radius: 5px; /* Bordas levemente arredondadas (opcional) */
+
+}
+
+p {
+    color: white;
+}
+
+#video-player {
+    width: 80%;                 /* Largura do contêiner em relação à tela (80% da largura da tela) */
+    max-width: 1000px;          /* Tamanho máximo da largura do vídeo */
+    position: relative;         /* Permite o ajuste do iframe dentro do contêiner */
+    margin-bottom: 20px;
+}
+
+/* O iframe se adapta ao tamanho do contêiner */
+.player-principal {
+    width: 100%;                /* Faz o iframe ocupar toda a largura do contêiner */
+    height: auto;               /* Ajusta a altura automaticamente para manter a proporção */
+    aspect-ratio: 16/9;         /* Garante que o vídeo tenha uma proporção de 16:9 (padrão do YouTube) */
+    border: none;             /* Remove a borda ao redor do iframe */
+   margin-left: 90px;
+}
+
+#thumbnails {
+    display: flex;              /* Ativa o flexbox */
+    justify-content: center;    /* Centraliza horizontalmente */
+    flex-wrap: wrap;           /* Permite que as miniaturas se movam para a próxima linha */
+    margin: 19px 0;    
+    position: relative;
+    top: -10px;            /* Adiciona uma margem superior e inferior */
+    text-align: center; /* Centraliza as miniaturas e os botões */
+    margin-top: 20px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;  /* Espaçamento entre as miniaturas */
+}
+
+.thumbnail {
+    width: 200px; /* Ajuste o tamanho das miniaturas */
+    height: 150px; /* Ajuste a altura das miniaturas */
+    cursor: pointer;
+}
+
+
+
+.thumbnail.active {
+    display: block; /* Mostra apenas as miniaturas ativas */
+}
+
+.button-container {
+    display: flex; 
+    justify-content: space-between; /* Coloca os botões nos extremos */
+    width: 60%; /* Faz os botões ocuparem a largura total */
+    position: relative; /* Para permitir o posicionamento absoluto, se necessário */
+}
+
+
+#prev {
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+#next {
+    align-self: flex-end; /* Alinha o botão à direita */
+}
 
 
 /*FILMOGRAFIA*/
@@ -720,13 +852,18 @@ p {
 .filmografia-container {
     max-width: 900px;
     margin: 0 auto;
-    background: rgb(8, 8, 113);
+    background-color: rgba(10, 41, 88, 0.9);
     padding: 30px;
     box-shadow: 0 4px 20px rgba(4, 255, 255, 0.473);
     border-radius: 8px;
     text-align: center;
 }
 
+.filmografia-container ul {
+    list-style-type: none;  /* Remove os marcadores (bolinhas) */
+    padding-left: 0;        /* Remove o recuo da lista */
+    
+}
 .filmografia {
     text-align: center;
     font-size: 3em; /* Tamanho aumentado */
@@ -820,20 +957,23 @@ li {
     justify-content: center;
     width: 100%;
     position: relative; /* Importante para o z-index */
+    justify-content: center;
 }
 
 .container5 {
-    width: 90%;
-    max-width: 700px;
-    background-color:rgba(10, 41, 88, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  
+    background-color: rgba(10, 41, 88, 0.9);
     border: 1px solid #eaeaea56;
     overflow: hidden;
-    position: relative; /* Permite usar z-index para os elementos internos */
-    justify-content: center;
+ 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(4, 255, 255, 0.473);
+    border-radius: 8px;
+    text-align: center;
+
+    
 }
 
 .profile-img {
@@ -844,6 +984,7 @@ li {
     margin-bottom: 20px;
     border: 2px solid #d1d1d159;
     z-index: 5; /* Certifica que a imagem também esteja visível */
+    justify-content: center;
     
 }
 
