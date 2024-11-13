@@ -99,6 +99,7 @@ html, body {
     width: 100%; 
     overflow-x: hidden; /* Remove a rolagem horizontal */
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* From Uiverse.io by 0800Gonza */ 
@@ -160,17 +161,7 @@ html, body {
     animation: slide-in-top 0.3s both;
   }
   
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+ 
   
 /* Carrossel de fotos */
 .principal-carrossel {
@@ -340,7 +331,7 @@ input[type="text"], input[type="email"], textarea {
 input[type="submit"] {
     padding: 10px;
     border: none;
-    background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF); ;
+    background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF); 
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -701,19 +692,39 @@ p {
     color: white;
 }
 
-#video-player {
-    width: 80%;                 /* Largura do contêiner em relação à tela (80% da largura da tela) */
-    max-width: 1000px;          /* Tamanho máximo da largura do vídeo */
+#video-player1 {
+    width: 100%;                 /* Largura do contêiner em relação à tela (80% da largura da tela) */
+    height: auto;         /* Tamanho máximo da largura do vídeo */
     position: relative;         /* Permite o ajuste do iframe dentro do contêiner */
     margin-bottom: 20px;
+
+    
 }
 
 /* O iframe se adapta ao tamanho do contêiner */
 .player-principal {
     width: 100%;                /* Faz o iframe ocupar toda a largura do contêiner */
     height: auto;               /* Ajusta a altura automaticamente para manter a proporção */
-    aspect-ratio: 16/9;         /* Garante que o vídeo tenha uma proporção de 16:9 (padrão do YouTube) */
-    border: none;               /* Remove a borda ao redor do iframe */
+    aspect-ratio: 16/9;         /* Garante que o vídeo tenha uma proporção de 16:9 (padrão do YouTube) */             
+   
+}
+
+
+#video-player2 {
+    width: 100%;                 /* Largura do contêiner em relação à tela (80% da largura da tela) */
+    height: auto;         /* Tamanho máximo da largura do vídeo */
+    position: relative;         /* Permite o ajuste do iframe dentro do contêiner */
+    margin-bottom: 20px;
+
+    
+}
+
+/* O iframe se adapta ao tamanho do contêiner */
+.player-principal-2 {
+    width: 100%;                /* Faz o iframe ocupar toda a largura do contêiner */
+    height: auto;               /* Ajusta a altura automaticamente para manter a proporção */
+    aspect-ratio: 16/9;         /* Garante que o vídeo tenha uma proporção de 16:9 (padrão do YouTube) */             
+   
 }
 
 #thumbnails {
@@ -748,21 +759,28 @@ p {
     display: block; /* Mostra apenas as miniaturas ativas */
 }
 
-.button-container {
+#secao3 .button-container {
     display: flex; 
     justify-content: space-between; /* Coloca os botões nos extremos */
-    width: 60%; /* Faz os botões ocuparem a largura total */
+    width: 100%; /* Faz os botões ocuparem a largura total do container pai */
     position: relative; /* Para permitir o posicionamento absoluto, se necessário */
+    margin: 0 auto; /* Centraliza o container se necessário */
+    max-width: 80%; /* Limita a largura máxima, se necessário */
+    padding: 3px;
+
 }
 
-
 #prev {
-    align-self: flex-start; /* Alinha o botão à esquerda */
+    align-self: center; /* Alinha o botão à esquerda */
+    background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF); 
+   
 }
 
 #next {
-    align-self: flex-end; /* Alinha o botão à direita */
+    align-self: center; /* Alinha o botão à direita */
+    background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF); 
 }
+
 
 /*WEB SÉRIE*/
 
@@ -784,67 +802,29 @@ p {
     color: white;
 }
 
-#video-player {
-    width: 80%;                 /* Largura do contêiner em relação à tela (80% da largura da tela) */
-    max-width: 1000px;          /* Tamanho máximo da largura do vídeo */
+
+/* O iframe se adapta ao tamanho do contêiner */
+.video-principal-2 {
+    width: 100%; 
+    height: 0;                /* Largura do contêiner em relação à tela (80% da largura da tela) */
+    max-width: 100%;        /* Tamanho máximo da largura do vídeo */
+    padding-bottom: 56.25%;
     position: relative;         /* Permite o ajuste do iframe dentro do contêiner */
     margin-bottom: 20px;
 }
 
-/* O iframe se adapta ao tamanho do contêiner */
-.player-principal {
-    width: 100%;                /* Faz o iframe ocupar toda a largura do contêiner */
-    height: auto;               /* Ajusta a altura automaticamente para manter a proporção */
-    aspect-ratio: 16/9;         /* Garante que o vídeo tenha uma proporção de 16:9 (padrão do YouTube) */
-    border: none;             /* Remove a borda ao redor do iframe */
-   margin-left: 90px;
-}
-
-#thumbnails {
-    display: flex;              /* Ativa o flexbox */
-    justify-content: center;    /* Centraliza horizontalmente */
-    flex-wrap: wrap;           /* Permite que as miniaturas se movam para a próxima linha */
-    margin: 19px 0;    
-    position: relative;
-    top: -10px;            /* Adiciona uma margem superior e inferior */
-    text-align: center; /* Centraliza as miniaturas e os botões */
-    margin-top: 20px;
-}
-
-.thumbnail-container {
+#secao4 .thumbnails-outra-secao {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;  /* Espaçamento entre as miniaturas */
+    align-items: center;
 }
 
-.thumbnail {
-    width: 200px; /* Ajuste o tamanho das miniaturas */
-    height: 150px; /* Ajuste a altura das miniaturas */
-    cursor: pointer;
-}
-
-
-
-.thumbnail.active {
-    display: block; /* Mostra apenas as miniaturas ativas */
-}
-
-.button-container {
-    display: flex; 
-    justify-content: space-between; /* Coloca os botões nos extremos */
-    width: 60%; /* Faz os botões ocuparem a largura total */
-    position: relative; /* Para permitir o posicionamento absoluto, se necessário */
+#secao4 .thumbnails-outra-secao img {
+    width: 100px;  /* Tamanho das miniaturas */
+    margin-right: 10px;
+    
 }
 
 
-#prev {
-    align-self: flex-start; /* Alinha o botão à esquerda */
-}
-
-#next {
-    align-self: flex-end; /* Alinha o botão à direita */
-}
 
 
 /*FILMOGRAFIA*/
@@ -1040,11 +1020,17 @@ li {
 }
 
 footer {
-    background-color: var(--secondary-color);
-    color: rgb(0, 0, 0);
-    margin: -20;
-    padding: 0px 0; /* Espaço interno menor */
-    text-align: center;
-    height: -20px; /* Ajusta a altura do rodapé */
-    line-height: 40px; /* Centraliza o texto verticalmente */
+    background-color: #000;  /* Cor de fundo preta */
+    color: #fff;             /* Cor do texto branca */
+    text-align: center;      /* Alinha o texto no centro */
+    padding: 20px 0;         /* Adiciona espaço interno (20px em cima e embaixo) */
+    height: 80px;            /* Define a altura do footer */
+    line-height: 80px;       /* Centraliza o texto verticalmente */
+    font-family: 'Roboto', sans-serif;
 }
+
+footer .p {
+    font-family: 'Roboto', sans-serif;
+
+}
+
